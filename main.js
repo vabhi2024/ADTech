@@ -107,3 +107,27 @@
     
 })(jQuery);
 
+
+// counter js
+ const counters = document.querySelectorAll('.counter');
+
+  counters.forEach(counter => {
+    counter.innerText = "0";
+
+    const updateCount = () => {
+      const target = +counter.getAttribute("data-target");
+      const current = +counter.innerText;
+
+      const speed = 300;
+      const increment = target / speed;
+
+      if (current < target) {
+        counter.innerText = Math.ceil(current + increment);
+        setTimeout(updateCount, 20);
+      } else {
+        counter.innerText = target + "+";
+      }
+    };
+
+    updateCount();
+  });
