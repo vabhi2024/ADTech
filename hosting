@@ -212,6 +212,5 @@ function updatePayment() {
         <button class="btn">Make Payment</button>
     </a>
 </div>
-    
-</body>
+    </body>
 </html>
