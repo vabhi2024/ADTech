@@ -4,7 +4,7 @@
 body {
     color: #797979;
     background: #ffffff;
-    font-family: 'Montserrat', sans-serif;
+    , sans-serif;
 }
 
 h1,
@@ -1303,6 +1303,36 @@ a:focus {
     }
 }
 
+
+/* POP UP CSS */
+
+.popup-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.popup-box {
+    background: #fff;
+    font-family: 'Montserrat';
+    padding: 25px 30px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 300px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+.popup-box button {
+  color: #fff;
+  border: none;
+  font-family: 'Montserrat';
+  border-radius: 2px;
+  background: #007bff;
+  padding: 10px 50px;
+}
 
 /*******************************/
 /*********** Blog CSS **********/
