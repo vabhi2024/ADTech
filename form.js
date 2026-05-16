@@ -1,10 +1,10 @@
-document.getElementById("contactForm").addEventListener("submit", async function(e) {
+document.getElementById("contactForm").addEventListener("submit", async function (e) {
     e.preventDefault();
 
     const form = e.target;
     const formData = new FormData(form);
 
-    // ✅ Ensure token (access_key) is always present
+    // ✅ Access key added in JS
     formData.append("access_key", "fdff9149-19fc-4bf3-8a40-f83b405de0d0");
 
     try {
@@ -15,14 +15,15 @@ document.getElementById("contactForm").addEventListener("submit", async function
 
         const result = await response.json();
 
-        if (result.success === true) {
+        if (result.success) {
             showPopup();
             form.reset();
         } else {
-            alert("Something went wrong! Try again!");
+            alert(result.message || "Something went wrong!");
         }
 
     } catch (error) {
+        console.log(error);
         alert("Network error. Try again!");
     }
 });
