@@ -109,12 +109,13 @@
 
 
 // counter js
- const counters = document.querySelectorAll(".counter");
+ 
+const counters = document.querySelectorAll(".counter");
 
 function animateCounter(counter) {
   const target = +counter.getAttribute("data-target");
   let current = 0;
-  const speed = target / 80;
+  const speed = target / 50;
 
   const update = () => {
     if (current < target) {
@@ -122,18 +123,16 @@ function animateCounter(counter) {
       counter.textContent = Math.floor(current);
       requestAnimationFrame(update);
     } else {
-      counter.textContent = target;
+      counter.textContent = target + "+"; 
     }
   };
   update();
 }
 
-// Reset counter when out of view
 function resetCounter(counter) {
   counter.textContent = "0";
 }
 
-// Intersection Observer
 const observer = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
@@ -149,6 +148,4 @@ const observer = new IntersectionObserver(
   { threshold: 0.5 }
 );
 
-// Observe all boxes
 document.querySelectorAll(".counter-box").forEach((box) => observer.observe(box));
-
