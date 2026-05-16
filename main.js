@@ -109,25 +109,46 @@
 
 
 // counter js
- const counters = document.querySelectorAll('.counter');
+ const counters = document.querySelectorAll(".counter");
 
-  counters.forEach(counter => {
-    counter.innerText = "0";
+function animateCounter(counter) {
+  const target = +counter.getAttribute("data-target");
+  let current = 0;
+  const speed = target / 80;
 
-    const updateCount = () => {
-      const target = +counter.getAttribute("data-target");
-      const current = +counter.innerText;
+  const update = () => {
+    if (current < target) {
+      current += speed;
+      counter.textContent = Math.floor(current);
+      requestAnimationFrame(update);
+    } else {
+      counter.textContent = target;
+    }
+  };
+  update();
+}
 
-      const speed = 300;
-      const increment = target / speed;
+// Reset counter when out of view
+function resetCounter(counter) {
+  counter.textContent = "0";
+}
 
-      if (current < target) {
-        counter.innerText = Math.ceil(current + increment);
-        setTimeout(updateCount, 20);
+// Intersection Observer
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      const counter = entry.target.querySelector(".counter");
+
+      if (entry.isIntersecting) {
+        animateCounter(counter); 
       } else {
-        counter.innerText = target + "+";
+        resetCounter(counter); 
       }
-    };
+    });
+  },
+  { threshold: 0.5 }
+);
 
-    updateCount();
-  });
+// Observe all boxes
+document.querySelectorAll(".counter-box").forEach((box) => observer.observe(box));
+
