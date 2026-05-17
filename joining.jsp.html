@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Joining Form</title>
+
+<style>
+    *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+        font-family:'poppins', sans-serif;
+    }
+
+    body{
+        background:linear-gradient(135deg,#eef2f3,#dfe9f3);
+    }
+
+    header{
+        background:red;
+        color:#fff;
+        padding: 18px 20px;
+        width: 100%;
+        display:flex;
+        position: fixed;
+        font-size: 20px;
+        font-weight: 600;
+        justify-content:space-between;
+    }
+
+    .container{
+        width:100%;
+        max-width:600px;
+        margin:auto;
+        padding:10px;
+    }
+
+    h2{
+        text-align:center;
+        margin:20px 0;
+        font-weight: 200;
+    }
+
+    /* CARDS */
+    .skills-grid{
+        display:grid;
+        grid-template-columns:repeat(auto-fit, minmax(140px, 1fr));
+        gap:15px;
+        margin-bottom:25px;
+    }
+
+    .skill-card{
+        background:#fff;
+        border-radius:10px;
+        overflow:hidden;
+        box-shadow:0 6px 15px rgba(0,0,0,0.1);
+        cursor:pointer;
+        transition:0.3s;
+        text-align:center;
+        border:1.5px solid transparent;
+        user-select:none;
+    }
+
+    .skill-card img{
+        width:50px;
+        height:auto;
+        padding:0;
+        object-fit:cover;
+    }
+
+    .skill-card h3{
+        padding:0;
+        font-size:16px;
+    }
+
+    .skill-card.active{
+        border-color:#007bff;
+        transform:scale(1.05);
+    }
+
+    /* FORM */
+    form {
+        background:#fff;
+        padding:20px;
+        border-radius:12px;
+        box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    input, select, textarea, button{
+        width:100%;
+        padding:14px;
+        background: #fff;
+        margin-top:10px;
+        border-radius: 5px;
+        border:1px solid darkblue;
+        outline: none;
+        font-size:15px;
+        transition: 0.4s ease;
+    }
+  
+   input:hover, select:hover, textarea:hover {
+     border:1px solid red;
+   }
+  
+    button{
+        background:linear-gradient(135deg,#28a745,#20c997);
+        color:#fff;
+        border:none;
+        font-size:18px;
+        cursor:pointer;
+    }
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <span>ADTech Inc.</span>
+    <span onclick="window.history.back()">➜</span>
+</header>
+
+    <br><br><br>
+    
+<div class="container">
+
+    <h2>─── Select Your Skills ───</h2>
+
+    <div class="skills-grid">
+
+        <div class="skill-card"><img src="https://img.icons8.com/color/96/html-5.png"><h3>HTML5</h3></div>
+        <div class="skill-card"><img src="https://img.icons8.com/color/96/css3.png"><h3>CSS3</h3></div>
+        <div class="skill-card"><img src="https://img.icons8.com/color/96/javascript.png"><h3>JavaScript</h3></div>
+        <div class="skill-card"><img src="https://img.icons8.com/color/96/react-native.png"><h3>ReactJS</h3></div>
+        <div class="skill-card"><img src="https://img.icons8.com/color/96/nodejs.png"><h3>NodeJS</h3></div>
+        <div class="skill-card"><img src="https://pngimg.com/uploads/php/php_PNG48.png"><h3>PHP</h3></div>
+        <div class="skill-card"><img src="https://img.icons8.com/color/96/python.png"><h3>Python</h3></div>
+        <div class="skill-card"><img src="https://img.icons8.com/color/96/java-coffee-cup-logo.png"><h3>Java</h3></div>        
+        <div class="skill-card"><img src="https://img.icons8.com/color/96/mongodb.png"><h3>MongoDB</h3></div>
+        <div class="skill-card"><img src="https://img.icons8.com/color/96/mysql-logo.png"><h3>MySQL</h3></div>
+        <div class="skill-card"><img src="https://cdn.simpleicons.org/razorpay/0C2451"><h3>Payments</h3></div>
+        <div class="skill-card"><img src="https://img.icons8.com/color/96/google-firebase-console.png"><h3>Firebase</h3></div>
+        <div class="skill-card"><img src="https://img.icons8.com/color/96/figma.png"><h3>Figma</h3></div>
+        <div class="skill-card"><img src="https://img.icons8.com/color/96/canva.png"><h3>Canva</h3></div>      
+        
+    </div>
+
+    <h2>─── Personal Details ───</h2>
+    <!-- FORM -->
+    <form id="contactForm">
+
+        <input type="hidden" name="access_key" value="fdff9149-19fc-4bf3-8a40-f83b405de0d0">
+
+        <!-- THIS WILL HOLD SKILLS -->
+        <input type="hidden" name="skills" id="skillsInput">
+
+        <input type="text" name="name" placeholder="Name" required>
+        <input type="text" name="father_name" placeholder="Father's Name">
+
+        <select name="gender">
+            <option hidden>Select Gender</option>
+            <option>Male</option>
+            <option>Female</option>
+            <option>Other</option>
+        </select>
+
+        <input type="number" name="age" placeholder="Age">
+        <input type="number" name="phone" placeholder="Phone" required>
+        <input type="email" name="email" placeholder="Email" required>
+
+        <textarea name="address" rows="4" placeholder="Address"></textarea>
+
+        <button type="submit">Submit</button>
+
+    </form>
+
+</div>
+
+<script>
+let selectedSkills = [];
+
+/* SELECT SKILLS */
+document.querySelectorAll(".skill-card").forEach(card=>{
+    card.addEventListener("click",()=>{
+
+        const skill = card.querySelector("h3").innerText;
+
+        card.classList.toggle("active");
+
+        if(selectedSkills.includes(skill)){
+            selectedSkills = selectedSkills.filter(s => s !== skill);
+        } else {
+            selectedSkills.push(skill);
+        }
+
+    });
+});
+
+/* SUBMIT FORM */
+document.getElementById("contactForm").addEventListener("submit", async function(e){
+    e.preventDefault();
+
+    // add skills to hidden input
+    document.getElementById("skillsInput").value = selectedSkills.join(", ");
+
+    const btn = this.querySelector("button");
+    btn.innerText = "Sending...";
+
+    const formData = new FormData(this);
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData
+    });
+
+    const result = await response.json();
+
+    if(result.success){
+        alert("Your request has been submitted successfully!");
+        this.reset();
+        selectedSkills = [];
+        document.querySelectorAll(".skill-card").forEach(c=>c.classList.remove("active"));
+    } else {
+        alert("Somthing went wroung? Try again!");
+    }
+
+    btn.innerText = "Submit";
+});
+</script>
+
+</body>
+</html>
