@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <title>Booking Servics</title>
+
+  <style>
+  * {
+    font-family: 'Poppins', sans-serif;
+  }
+  
+    html, body {
+      height: 100%;      
+    }
+
+    body {      
+      background: #f4f4f4;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+
+    .container {
+      background: #fff;
+      width: 100%;
+      max-width: 600px;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    h2 { text-align: center; margin-bottom: 5px; }
+    p { text-align: center; font-size: 14px; color: #666; margin-bottom: 20px; }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
+
+ input, textarea, select {
+  width: 100%;
+  max-width: 420px;
+  background: #fff;
+  box-sizing: border-box;  
+  margin: 5px auto;
+  display: block;
+  padding: 10px;
+  border: 1px solid #888;
+  border-radius: 5px;
+  outline-color: red;
+  font-size: 15px;
+}
+  
+    textarea {
+      height: 100px;
+      resize: none;
+    }
+
+    button {
+      width: 100%;
+      max-width: 420px;
+      padding: 12px;
+      background: red;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 5px;
+    }
+
+    button:hover { background: darkred; }
+
+    .success {
+      display: none;
+      text-align: center;
+      color: green;
+      margin-top: 10px;
+    }
+
+    .error {
+      display: none;
+      text-align: center;
+      color: red;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+  <img src="https://dreamwebworld.com/wp-content/uploads/2024/06/web_design.png.webp" alt="logo" height="auto" width="100%">
+<p>"Tell us about your project and we’ll build a high-quality website or app tailored to your needs."</p>
+  <form id="bookingForm">
+
+    <input type="hidden" name="access_key" value="fdff9149-19fc-4bf3-8a40-f83b405de0d0">
+
+    <input type="text" id="name" placeholder="Your Name" required />
+    <input type="email" id="email" placeholder="Email Address" required />
+    <input type="number" id="phone" placeholder="Phone Number" required />
+
+    <select id="service" name="service" required>
+  <option value="">Select Service</option>
+  <option value="landing-page-website">Landing Page Website</option>
+  <option value="business-website">Business Website</option>
+  <option value="portfolio-website">Portfolio Website</option>
+  <option value="blog-personal-website">Blog / Personal Website</option>
+  <option value="ecommerce-website">E-Commerce Website</option>
+  <option value="corporate-website">Corporate Website</option>
+  <option value="startup-website">Startup Website</option>
+  <option value="real-estate-website">Real Estate Website</option>
+  <option value="restaurant-website">Restaurant Website</option>
+  <option value="education-website">Educational Website</option>
+  <option value="learning-management-site">Learning Management System</option>
+  <option value="news-magazine-website">News / Magazine Website</option>
+  <option value="booking-website">Booking / Appointment Website</option>
+  <option value="hotel-travel-website">Hotel / Travel Website</option>
+  <option value="fitness-gym-website">Fitness / Gym Website</option>
+  <option value="nonprofit-website">NGO / Non-Profit Website</option>
+  <option value="directory-website">Directory Website</option>
+  <option value="forum-community-website">Forum / Community Website</option>
+  <option value="saas-web-app">SaaS / Web Application</option>
+  <option value="custom-web-app">Custom Web Application</option>
+  <option value="mobile-app">Mobile App Development</option>
+</select>
+
+    <select id="budget" required>
+      <option value="">Select Budget</option>
+      <option value="basic_website">₹3,000 - ₹8,000 (Basic Landing Page)</option>
+      <option value="starter_website">₹8,000 - ₹15,000 (Starter Website)</option>
+      <option value="small_business_website">₹15,000 - ₹30,000 (Small Business Site)</option>
+      <option value="professional_website">₹30,000 - ₹60,000 (Professional Website)</option>
+      <option value="advanced_website">₹60,000 - ₹1,00,000 (Advanced Business / Ecommerce)</option>
+      <option value="premium_website_app">₹1,00,000 - ₹2,50,000 (Premium Website / Portal)</option>
+      <option value="enterprise_website_app">₹2,50,000+ (Enterprise / SaaS / Custom App)</option>
+    </select>
+
+    <textarea id="message" placeholder="Tell us about your project?"></textarea>
+
+    <button type="submit">Submit Booking</button>
+  </form>
+
+  <div class="success" id="successMsg">
+   Your Booking submitted successfully! Our team will get in touch with you soon.
+  </div>
+
+  <div class="error" id="errorMsg">
+    Something went wrong. Please try again.
+  </div>
+</div>
+
+<script>
+  document.getElementById("bookingForm").addEventListener("submit", async function(e) {
+    e.preventDefault();
+
+    const formData = new FormData();
+
+    formData.append("name", document.getElementById("name").value);
+    formData.append("email", document.getElementById("email").value);
+    formData.append("phone", document.getElementById("phone").value);
+    formData.append("service", document.getElementById("service").value);
+    formData.append("budget", document.getElementById("budget").value);
+    formData.append("message", document.getElementById("message").value);
+    formData.append("access_key", "fdff9149-19fc-4bf3-8a40-f83b405de0d0");
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        document.getElementById("successMsg").style.display = "block";
+        document.getElementById("errorMsg").style.display = "none";
+        this.reset();
+      } else {
+        throw new Error("Failed");
+      }
+
+    } catch (error) {
+      document.getElementById("errorMsg").style.display = "block";
+      document.getElementById("successMsg").style.display = "none";
+    }
+  });
+</script>
+
+</body>
+</html>
