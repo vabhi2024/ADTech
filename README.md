@@ -1,3 +1,3 @@
 # ADTech
-ADTech Inc Official Website
+ADTech India Official Website
 licence by - Apache 2.0
