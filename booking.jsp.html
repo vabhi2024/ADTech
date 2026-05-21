@@ -1,78 +1,76 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <!-- Favicon -->
+    <head>
+        <meta charset="utf-8">
+        <title>ADTech | Software Solutions</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta name="keywords" content="ADTech Inc, ADTech Software Services, IT Solutions, Software Development, Technology Services, Web Development, Digital Services">
+        <meta name="description" content="ADTech Inc – A professional software services and technology solutions company offering web development, digital services, and IT consulting.">
+        
+      <!-- Favicon -->
         <link href="favicon.png" rel="icon">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <title>Booking Servics</title>
 
-  <style>
-  * {
-    font-family: 'Poppins', sans-serif;
-  }
+        <!-- Google Font -->
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    html, body {
-      height: 100%;      
-    }
+        <!-- CSS Libraries -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <link href="lib/animate/animate.min.css" rel="stylesheet">
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
 
-    body {      
-      background: #f4f4f4;
-      margin: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 10px;
-      box-sizing: border-box;
-    }
+        <!-- Template Stylesheet -->
+        <link href="style.css" rel="stylesheet">
+    </head>
 
-   /* Header container */
-  .header {
-    position: fixed;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 60px;
-    background: red;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-    z-index: 999;
-    transition: left 0.5s ease;
-  }
+    <body data-spy="scroll" data-target=".navbar" data-offset="51">
+                <!-- Nav Bar Start -->
+        <div class="navbar navbar-expand-lg bg-light navbar-light">
+            <div class="container-fluid">
+                <a href="index.html" class="navbar-brand">ADTech India</a>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-  /* Slide-in effect */
-  .header.show {
-    left: 0;
-  }
+                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                    <div class="navbar-nav ml-auto">
+                       <a href="javascript:window.history.back();" class="nav-item nav-link active">
+                            <i class="fa fa-home"></i> Home</a>
 
-  .brand {
-    font-size: 20px;
-    font-weight: bold;
-  }
+                        <a href="#about" class="nav-item nav-link">
+                            <i class="fa fa-user"></i> About</a>
 
-  .back-btn {
-    cursor: pointer;
-    padding: 8px 40px;
-    background: none;
-   }
-  
- .container {
-  display: flex;
-  background: none;
-  width: 100%;
-  max-width: 600px;
-  padding: 25px;
-  margin-top: 80px;
-  flex-direction: column;
-  justify-content: center;
-}
+                        <a href="#service" class="nav-item nav-link">
+                            <i class="fa fa-cogs"></i> Service</a>
+
+                        <a href="#experience" class="nav-item nav-link">
+                           <i class="fa fa-briefcase"></i> Experience</a>
+
+                        <a href="#portfolio" class="nav-item nav-link">
+                            <i class="fa fa-folder-open"></i> Projects</a>
+
+<a href="#booking" class="nav-item nav-link">
+                            <i class="fa fa-tags"></i> Booking</a>
+
+                        <a href="#review" class="nav-item nav-link">
+                            <i class="fa fa-star"></i> Review</a>
+
+                        <a href="#team" class="nav-item nav-link">
+                            <i class="fa fa-users"></i> Team</a>
+
+                        <a href="#blog" class="nav-item nav-link">
+                            <i class="fa fa-blog"></i> Blogs</a>
+
+                        <a href="#contact" class="nav-item nav-link">
+                            <i class="fa fa-envelope"></i> Contact</a>
+                   </div>
+                </div>
+            </div>
+        </div>
+        <!-- Nav Bar End -->
+      
+ <style>
 
 h2 { text-align: center; margin-bottom: 5px; }
 p  { text-align: center; font-size: 14px; color: #666; margin-bottom: 20px; }
@@ -111,7 +109,7 @@ textarea {
   resize: none;
 }
 
-button {
+.s-btn {
   width: 100%;
   padding: 12px;
   background: red;
@@ -122,7 +120,7 @@ button {
   cursor: pointer;
 }
 
-button:hover { background: darkred; }
+.s-btn:hover { background: darkred; }
     .success {
       display: none;
       text-align: center;
@@ -137,16 +135,7 @@ button:hover { background: darkred; }
       margin-top: 10px;
     }
   </style>
-</head>
 
-<body>
-
-  <!-- HEADER -->
-<div class="header" id="mainHeader">
-  <div class="brand">ADTech India</div>
-  <div class="back-btn" onclick="window.history.back()">➜</div>
-</div>
-  
 <div class="container">
   <img src="https://dreamwebworld.com/wp-content/uploads/2024/06/web_design.png.webp" alt="logo" height="auto" width="100%">
 <p>"Tell us about your project and we’ll build a high-quality website or app tailored to your needs."</p>
@@ -196,7 +185,7 @@ button:hover { background: darkred; }
 
     <textarea id="message" placeholder="Tell us about your project?"></textarea>
 
-    <button type="submit">Submit Booking</button>
+    <button class="s-btn" type="submit">Submit Booking</button>
   </form>
 
   <div class="success" id="successMsg">
@@ -244,13 +233,77 @@ button:hover { background: darkred; }
     }
   });
 </script>
+      
+      
+                <!-- Footer Start -->
+        <div class="footer wow fadeIn" data-wow-delay="0.3s">
+            <div class="container-fluid">
+                <div class="container">
+                    <div class="footer-info">
+                        <img src="img/adtech.png" height="auto" width="55%">
+                        <br><br>
+                        <h2>ADTech Software Solutions</h2>
+                        <h3>(Location: Barabanki District Uttar Pradesh India 225001)</h3>
+                        <div class="footer-menu">
+                            <p>+91 8005389500</p>
+                            <p>contact@adtech2021.in</p>
+                        </div>
 
-  <script>
-  // Trigger slide-in after page load
-  window.onload = () => {
-    document.getElementById("mainHeader").classList.add("show");
-  };
-</script>
-  
-</body>
-</html>
+ <div class="footer-social">
+    <a href="mailto:help.adtech@protonmail.com" target="_blank">
+        <i class="fab fa-google"></i>
+    </a>
+
+    <a href="https://facebook.com/adtech2021.in" target="_blank">
+        <i class="fab fa-facebook"></i>
+    </a>
+
+    <a href="https://instagram.com/adtech2021.in" target="_blank">
+        <i class="fab fa-instagram"></i>
+    </a>
+
+    <a href="https://twitter.com/adtech2021_in" target="_blank">
+        <!-- Using Twitter/X icon -->
+        <i class="fab fa-twitter"></i>
+    </a>
+
+    <a href="https://linkedin.com/in/adtech2021-in" target="_blank">
+        <i class="fab fa-linkedin"></i>
+    </a>
+
+    <a href="https://github.com/adtech2021-in" target="_blank">
+        <i class="fab fa-github"></i>
+    </a>
+
+    <a href="https://youtube.com/@adtech2021_in" target="_blank">
+        <i class="fab fa-youtube"></i>
+    </a>
+</div>
+                    </div>
+                </div>
+                <div class="container copyright">
+                    <p>&copy; 2026 - All Rights Reserved | Designed & Developed with <a href="#">ADTech India™</a></p>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+        
+        
+        <!-- Back to top button -->
+        <a href="#" class="btn back-to-top"><i class="fa fa-chevron-up"></i></a>
+        
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/wow/wow.min.js"></script>
+        <script src="lib/waypoints/waypoints.min.js"></script>
+        <script src="lib/typed/typed.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="lib/isotope/isotope.pkgd.min.js"></script>
+        <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+        <!-- Template Javascript -->
+        <script src="main.js"></script>
+    </body>
+</html>
