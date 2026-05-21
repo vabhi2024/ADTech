@@ -1,60 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>ADTech || Payments Gateway</title>
-        <!-- Favicon -->
+    <head>
+        <meta charset="utf-8">
+        <title>ADTech | Software Solutions</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta name="keywords" content="ADTech India, ADTech Software Services, ADTech Software Solutions, ADTech2021.in, Software Development, Web Development, Technical and Digital Services">
+        <meta name="description" content="ADTech India™ – A professional Software Services and Solutions, The Company Offering Web Development, Digital Services, and IT Consulting.">  
+      
+      <!-- Favicon -->
         <link href="favicon.png" rel="icon">
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-<style>
-   body {
-    font-family: 'Open Sans', sans-serif;
-    background: #f2f2f2;
-    text-align: center;
-    padding: 20px;
-}
+        <!-- Google Font -->
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-img {
-    width: 150px;
-    height:150px;
-}
+        <!-- CSS Libraries -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <link href="lib/animate/animate.min.css" rel="stylesheet">
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
 
-h3 {
-    color: red;
-}
+        <!-- Template Stylesheet -->
+        <link href="style.css" rel="stylesheet">
+    </head>
 
+    <body data-spy="scroll" data-target=".navbar" data-offset="51">
+                <!-- Nav Bar Start -->
+        <div class="navbar navbar-expand-lg bg-light navbar-light">
+            <div class="container-fluid">
+                <a href="index.html" class="navbar-brand">ADTech India</a>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                    <div class="navbar-nav ml-auto">
+                       <a href="javascript:window.history.back();" class="nav-item nav-link active">
+                            <i class="fa fa-home"></i> Home</a>
+
+                        <a href="#about" class="nav-item nav-link">
+                            <i class="fa fa-user"></i> About</a>
+
+                        <a href="#service" class="nav-item nav-link">
+                            <i class="fa fa-cogs"></i> Service</a>
+
+                        <a href="#experience" class="nav-item nav-link">
+                           <i class="fa fa-briefcase"></i> Experience</a>
+
+                        <a href="#portfolio" class="nav-item nav-link">
+                            <i class="fa fa-folder-open"></i> Projects</a>
+
+                          <a href="#booking" class="nav-item nav-link">
+                            <i class="fa fa-tags"></i> Booking</a>
+
+                        <a href="#review" class="nav-item nav-link">
+                            <i class="fa fa-star"></i> Review</a>
+
+                        <a href="#team" class="nav-item nav-link">
+                            <i class="fa fa-users"></i> Team</a>
+
+                        <a href="#blog" class="nav-item nav-link">
+                            <i class="fa fa-blog"></i> Blogs</a>
+
+                        <a href="#contact" class="nav-item nav-link">
+                            <i class="fa fa-envelope"></i> Contact</a>
+                   </div>
+                </div>
+            </div>
+        </div>
+        <!-- Nav Bar End -->
+      
+
+ <style>             
+        
 .box {
-    width: 90%;
-    margin: auto;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
     background: #fff;
     padding: 20px;
     border-radius: 12px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+   }
+        
+ .img {
+    width: 150px;
+    height:150px;
+      
 }
-select, button {
+
+.h3-title {
+    color: red;
+    font-size: 15px;
+    margin: 10px;
+}
+                
+select {
     width: 300px;
     padding: 12px;
     margin: 10px auto;
     font-size: 18px;
-    font-family: 'Open Sans';
-    border-radius: 8px;
+    font-family: 'Montserrat';
+    border-radius: 5px;
+    outline: none;
     border: 1px solid darkgreen;
 }
+        
+.btnn {        
+    width: 300px;
+    padding: 12px;
+    color: white;
+    background: green;
+    font-size: 18px;
+    font-family: 'Montserrat';
+    border-radius: 5px;
+    margin-top: -5px;
+    outline: none;
+    border: none;
+}
+        
 .qr-box {
-    margin-top: 17px;
+    margin-top: 10px;
 }
 .qr-img {
-    width: 270px;
-    height: 270px;
-    border: 2px solid black;
+    width: 300px;
+    height: 300px;
+    border: 2px solid green;
     border-radius: 5px;
     padding: 15px;
-}
-.btn {
-    background: #4CAF50;
-    color: white;
-    cursor: pointer;
 }
 
 .stepper-wrapper {
@@ -105,6 +177,7 @@ select, button {
 }
 .stepper-item.completed .step-counter {
   background-color: #4bb543;
+  color: white;  
 }
 .stepper-item.completed::after {
   position: absolute;
@@ -122,6 +195,56 @@ select, button {
   content: none;
 }
 </style>
+
+
+
+<div class="box">
+   <img class="img" src="data:image/svg+xml;base64,
+        PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48ZyBzdHJva2U9IiNmZjAyMDIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIyIj48cGF0aCBmaWxsPSIjZmYwMjAyIiBmaWxsLW9wYWNpdHk9IjAiIHN0cm9rZS1kYXNoYXJyYXk9IjYwIiBkPSJNMTIgM2M0Ljk3IDAgOSA0LjAzIDkgOWMwIDQuOTcgLTQuMDMgOSAtOSA5Yy00Ljk3IDAgLTkgLTQuMDMgLTkgLTljMCAtNC45NyA0LjAzIC05IDkgLTlaIj48YW5pbWF0ZSBmaWxsPSJmcmVlemUiIGF0dHJpYnV0ZU5hbWU9InN0cm9rZS1kYXNob2Zmc2V0IiBkdXI9IjAuNnMiIHZhbHVlcz0iNjA7MCIvPjxhbmltYXRlIGZpbGw9ImZyZWV6ZSIgYXR0cmlidXRlTmFtZT0iZmlsbC1vcGFjaXR5IiBiZWdpbj0iMXMiIGR1cj0iMC4xNXMiIHRvPSIwLjMiLz48L3BhdGg+PGcgZmlsbD0ibm9uZSI+PHBhdGggc3Ryb2tlLWRhc2hhcnJheT0iOCIgc3Ryb2tlLWRhc2hvZmZzZXQ9IjgiIGQ9Ik0xMiA3djYiPjxhbmltYXRlIGF0dHJpYnV0ZU5hbWU9InN0cm9rZS13aWR0aCIgYmVnaW49IjAuN3MiIGR1cj0iM3MiIGtleVRpbWVzPSIwOzAuMTswLjI7MC4zOzEiIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIiB2YWx1ZXM9IjI7MzszOzI7MiIvPjxhbmltYXRlIGZpbGw9ImZyZWV6ZSIgYXR0cmlidXRlTmFtZT0ic3Ryb2tlLWRhc2hvZmZzZXQiIGJlZ2luPSIwLjdzIiBkdXI9IjAuMnMiIHRvPSIwIi8+PC9wYXRoPjxwYXRoIHN0cm9rZS1kYXNoYXJyYXk9IjQiIHN0cm9rZS1kYXNob2Zmc2V0PSI0IiBkPSJNMTIgMTd2MC4wMSI+PGFuaW1hdGUgZmlsbD0iZnJlZXplIiBhdHRyaWJ1dGVOYW1lPSJzdHJva2UtZGFzaG9mZnNldCIgYmVnaW49IjAuN3MiIGR1cj0iMC4ycyIgdG89IjAiLz48YW5pbWF0ZSBhdHRyaWJ1dGVOYW1lPSJzdHJva2Utd2lkdGgiIGJlZ2luPSIxcyIgZHVyPSIzcyIga2V5VGltZXM9IjA7MC4xOzAuMjswLjM7MSIgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiIHZhbHVlcz0iMjszOzM7MjsyIi8+PC9wYXRoPjwvZz48L2c+PC9zdmc+"
+    alt="error">
+
+    <h3 class="h3-title">Your Website is ready for hosting. Please complete the process immediately to go live.</h3>
+
+    <div class="stepper-wrapper">
+      <div class="stepper-item completed">
+        <div class="step-counter">1</div>
+        <div class="step-name">Codes Verified</div>
+      </div>
+      <div class="stepper-item completed">
+        <div class="step-counter">2</div>
+        <div class="step-name">Security Verified</div>
+      </div>
+      <div class="stepper-item active">
+        <div class="step-counter">3</div>
+        <div class="step-name">Payment Pending</div>
+      </div>
+      <div class="stepper-item">
+        <div class="step-counter">4</div>
+        <div class="step-name">Hosting Pending</div>
+      </div>
+    </div>
+
+    <!-- Updated Plans -->
+    <select id="plan" onchange="updatePayment()">
+        <option value="200" hidden>Select Plans +</option>
+        <option value="2">1 Month – ₹99.00</option>
+        <option value="3">3 Months – ₹199.00</option>
+        <option value="6">6 Months – ₹499.00</option>
+        <option value="12">1 Year – ₹999.00</option>
+        <option value="24">2 Years – ₹1499.00</option>
+    </select>
+
+    <p id="amtText">──── 00 ────</p>
+
+    <div class="qr-box">
+        <img id="qrImg" class="qr-img" 
+             src="https://api.qrserver.com/v1/create-qr-code/?size=270x270&data=upi://pay?pa=adxmow@axl&pn=Domain%20Renewal&am=0&cu=INR" />
+    </div>
+ <br>
+    <a id="payBtn" onclick="return validatePayment()" href="#">
+        <button class="btnn"><i class="fa fa-chevron-circle-right"></i> MAKE PAYMENT</button>
+    </a>
+</div>
 
 <script>
 function updatePayment() {
@@ -143,7 +266,7 @@ function updatePayment() {
     document.getElementById("payBtn").setAttribute("href", upiLink);
 
     const qrURL =
-        `https://api.qrserver.com/v1/create-qr-code/?size=270x270&data=${encodeURIComponent(upiLink)}`;
+        `https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=${encodeURIComponent(upiLink)}`;
 
     document.getElementById("qrImg").src = qrURL;
 
@@ -162,60 +285,76 @@ function validatePayment() {
     return true; // Continue payment
 }
 </script>
+      
+                <!-- Footer Start -->
+        <div class="footer wow fadeIn" data-wow-delay="0.3s">
+            <div class="container-fluid">
+                <div class="container">
+                    <div class="footer-info">
+                        <img src="img/adtech.png" height="auto" width="55%">
+                        <br><br>
+                        <h2>ADTech Software Solutions</h2>
+                        <h3>(Location: Barabanki District Uttar Pradesh India 225001)</h3>
+                        <div class="footer-menu">
+                            <p>+91 8005389500</p>
+                            <p>contact@adtech2021.in</p>
+                        </div>
 
-</head>
-<body>
-
-<div class="box">
- <br>
-   <img src="data:image/svg+xml;base64,
-        PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48ZyBzdHJva2U9IiNmZjAyMDIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIyIj48cGF0aCBmaWxsPSIjZmYwMjAyIiBmaWxsLW9wYWNpdHk9IjAiIHN0cm9rZS1kYXNoYXJyYXk9IjYwIiBkPSJNMTIgM2M0Ljk3IDAgOSA0LjAzIDkgOWMwIDQuOTcgLTQuMDMgOSAtOSA5Yy00Ljk3IDAgLTkgLTQuMDMgLTkgLTljMCAtNC45NyA0LjAzIC05IDkgLTlaIj48YW5pbWF0ZSBmaWxsPSJmcmVlemUiIGF0dHJpYnV0ZU5hbWU9InN0cm9rZS1kYXNob2Zmc2V0IiBkdXI9IjAuNnMiIHZhbHVlcz0iNjA7MCIvPjxhbmltYXRlIGZpbGw9ImZyZWV6ZSIgYXR0cmlidXRlTmFtZT0iZmlsbC1vcGFjaXR5IiBiZWdpbj0iMXMiIGR1cj0iMC4xNXMiIHRvPSIwLjMiLz48L3BhdGg+PGcgZmlsbD0ibm9uZSI+PHBhdGggc3Ryb2tlLWRhc2hhcnJheT0iOCIgc3Ryb2tlLWRhc2hvZmZzZXQ9IjgiIGQ9Ik0xMiA3djYiPjxhbmltYXRlIGF0dHJpYnV0ZU5hbWU9InN0cm9rZS13aWR0aCIgYmVnaW49IjAuN3MiIGR1cj0iM3MiIGtleVRpbWVzPSIwOzAuMTswLjI7MC4zOzEiIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIiB2YWx1ZXM9IjI7MzszOzI7MiIvPjxhbmltYXRlIGZpbGw9ImZyZWV6ZSIgYXR0cmlidXRlTmFtZT0ic3Ryb2tlLWRhc2hvZmZzZXQiIGJlZ2luPSIwLjdzIiBkdXI9IjAuMnMiIHRvPSIwIi8+PC9wYXRoPjxwYXRoIHN0cm9rZS1kYXNoYXJyYXk9IjQiIHN0cm9rZS1kYXNob2Zmc2V0PSI0IiBkPSJNMTIgMTd2MC4wMSI+PGFuaW1hdGUgZmlsbD0iZnJlZXplIiBhdHRyaWJ1dGVOYW1lPSJzdHJva2UtZGFzaG9mZnNldCIgYmVnaW49IjAuN3MiIGR1cj0iMC4ycyIgdG89IjAiLz48YW5pbWF0ZSBhdHRyaWJ1dGVOYW1lPSJzdHJva2Utd2lkdGgiIGJlZ2luPSIxcyIgZHVyPSIzcyIga2V5VGltZXM9IjA7MC4xOzAuMjswLjM7MSIgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiIHZhbHVlcz0iMjszOzM7MjsyIi8+PC9wYXRoPjwvZz48L2c+PC9zdmc+"
-    alt="error">
-  
-    <h3>Your Website is ready for hosting. Please complete the process immediately to go live.</h3>
-
-    <div class="stepper-wrapper">
-      <div class="stepper-item completed">
-        <div class="step-counter">1</div>
-        <div class="step-name">Correct Codes</div>
-      </div>
-      <div class="stepper-item completed">
-        <div class="step-counter">2</div>
-        <div class="step-name">Security Verified</div>
-      </div>
-      <div class="stepper-item active">
-        <div class="step-counter">3</div>
-        <div class="step-name">Payments Pending</div>
-      </div>
-      <div class="stepper-item">
-        <div class="step-counter">4</div>
-        <div class="step-name">Hosting Pending</div>
-      </div>
-    </div>
-
-    <!-- Updated Plans -->
-    <select id="plan" onchange="updatePayment()">
-        <option value="200" hidden>Select Plans :</option>
-        <option value="2">1 Month – ₹99.00</option>
-        <option value="3">3 Months – ₹199.00</option>
-        <option value="6">6 Months – ₹499.00</option>
-        <option value="12">1 Year – ₹999.00</option>
-        <option value="24">2 Years – ₹1499.00</option>
-    </select>
-
-    <p id="amtText">──── 0.00 ────</p>
-
-    <div class="qr-box">
-        <img id="qrImg" class="qr-img" 
-             src="https://api.qrserver.com/v1/create-qr-code/?size=270x270&data=upi://pay?pa=adxmow@axl&pn=Domain%20Renewal&am=0&cu=INR" />
-    </div>
- <br>
-    <a id="payBtn" class="btn" onclick="return validatePayment()" href="#">
-        <button class="btn">Make Payment</button>
+ <div class="footer-social">
+    <a href="mailto:help.adtech@protonmail.com" target="_blank">
+        <i class="fab fa-google"></i>
     </a>
- 
- <h4>Team - ADTech Inc.</h4>
-</div>
 
-</body>
-</html>
+    <a href="https://facebook.com/adtech2021.in" target="_blank">
+        <i class="fab fa-facebook"></i>
+    </a>
+
+    <a href="https://instagram.com/adtech2021.in" target="_blank">
+        <i class="fab fa-instagram"></i>
+    </a>
+
+    <a href="https://twitter.com/adtech2021_in" target="_blank">
+        <!-- Using Twitter/X icon -->
+        <i class="fab fa-twitter"></i>
+    </a>
+
+    <a href="https://linkedin.com/in/adtech2021-in" target="_blank">
+        <i class="fab fa-linkedin"></i>
+    </a>
+
+    <a href="https://github.com/adtech2021-in" target="_blank">
+        <i class="fab fa-github"></i>
+    </a>
+
+    <a href="https://youtube.com/@adtech2021_in" target="_blank">
+        <i class="fab fa-youtube"></i>
+    </a>
+</div>
+                    </div>
+                </div>
+                <div class="container copyright">
+                    <p>&copy; 2026 - All Rights Reserved | Designed & Developed with <a href="#">ADTech India</a></p>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+        
+        
+        <!-- Back to top button -->
+        <a href="#" class="btn back-to-top"><i class="fa fa-chevron-up"></i></a>
+        
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/wow/wow.min.js"></script>
+        <script src="lib/waypoints/waypoints.min.js"></script>
+        <script src="lib/typed/typed.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="lib/isotope/isotope.pkgd.min.js"></script>
+        <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+        <!-- Template Javascript -->
+        <script src="main.js"></script>
+    </body>
+</html>
