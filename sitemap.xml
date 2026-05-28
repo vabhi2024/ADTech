@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Home Page -->
+  <url>
+    <loc>https://adtech2021.netlify.app/</loc>
+    <lastmod>2026-05-28</lastmod>
+    <priority>1.00</priority>
+  </url>
+
+  <!-- Booking Page -->
+  <url>
+    <loc>https://adtech2021.netlify.app/booking.jsp.html</loc>
+    <lastmod>2026-05-28</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- Joining Page -->
+  <url>
+    <loc>https://adtech2021.netlify.app/joining.jsp.html</loc>
+    <lastmod>2026-05-28</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- Licence Page -->
+  <url>
+    <loc>https://adtech2021.netlify.app/licence.aspx.html</loc>
+    <lastmod>2026-05-28</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- Services Page -->
+  <url>
+    <loc>https://adtech2021.netlify.app/services.aspx.html</loc>
+    <lastmod>2026-05-28</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+</urlset>
