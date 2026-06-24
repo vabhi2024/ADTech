@@ -1,1 +1,6 @@
+User-agent: *
+Disallow: /search/
+Disallow: /cgi-bin/
+Allow: /
 
+Sitemap: https://adtech2021.netlify.app/sitemap.xml
