@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>ADTech | Software Solutions</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta name="keywords" content="ADTech India, ADTech Software Services, ADTech Software Solutions, ADTech2021.in, Software Development, Web Development, Technical and Digital Services">
+        <meta name="description" content="ADTech India™ – A professional Software Services and Solutions, The Company Offering Web Development, Digital Services, and IT Consulting.">
+
+      <!-- Favicon -->
+        <link href="favicon.png" rel="icon">
+
+        <!-- Google Font -->
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+        <!-- CSS Libraries -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <link href="lib/animate/animate.min.css" rel="stylesheet">
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="style.css" rel="stylesheet">
+    </head>
+
+    <body data-spy="scroll" data-target=".navbar" data-offset="51">
+                <!-- Nav Bar Start -->
+        <div class="navbar navbar-expand-lg bg-light navbar-light">
+            <div class="container-fluid">
+                <a href="index.html" class="navbar-brand">ADTech India</a>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                    <div class="navbar-nav ml-auto">
+                       <a href="javascript:window.history.back();" class="nav-item nav-link active">
+                            <i class="fa fa-home"></i> Home</a>
+
+                        <a href="#about" class="nav-item nav-link">
+                            <i class="fa fa-user"></i> About</a>
+
+                        <a href="#service" class="nav-item nav-link">
+                            <i class="fa fa-cogs"></i> Service</a>
+
+                        <a href="#experience" class="nav-item nav-link">
+                           <i class="fa fa-briefcase"></i> Experience</a>
+
+                        <a href="#portfolio" class="nav-item nav-link">
+                            <i class="fa fa-folder-open"></i> Projects</a>
+                        
+                        <a href="#booking" class="nav-item nav-link">
+                            <i class="fa fa-tags"></i> Booking</a>
+
+                        <a href="#review" class="nav-item nav-link">
+                            <i class="fa fa-star"></i> Review</a>
+
+                        <a href="#team" class="nav-item nav-link">
+                            <i class="fa fa-users"></i> Team</a>
+
+                        <a href="#blog" class="nav-item nav-link">
+                            <i class="fa fa-blog"></i> Blogs</a>
+
+                        <a href="#contact" class="nav-item nav-link">
+                            <i class="fa fa-envelope"></i> Contact</a>
+                   </div>
+                </div>
+            </div>
+        </div>
+        <!-- Nav Bar End -->                
+        
+<style>
+.project-img {
+    width: 95%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+        
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 12px;
+    width: 95%;
+    margin: 0 auto;
+}
+
+@media (min-width: 600px) {
+    .card-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 15px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .card-grid {
+        grid-template-columns: repeat(8, 1fr);
+        gap: 15px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .card-grid {
+        grid-template-columns: repeat(10, 1fr);
+        max-width: 1800px; 
+    }
+}
+
+.custom-card {
+    background: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.custom-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+}
+
+.card-image-wrapper {
+    width: 100%;
+    height: 100px; 
+    overflow: hidden;
+    background-color: #edf2f7;
+}
+
+.card-og-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+
+.card-header-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.card-og-icon {
+    width: 22px;
+    height: 22px;
+    border-radius: 4px;
+    object-fit: contain;
+}
+
+.card-content h3 {
+    font-size: 0.95rem;
+    color: #1e293b;
+    font-weight: 600;
+    margin: 0 auto;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
+
+.card-btn {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.2s ease;
+}
+
+.card-btn:hover {
+    outline: none;
+    background-color: darkred;
+}
+        
+.custom-card{
+    opacity: 0;
+    transform: translateY(60px);
+    transition: all 0.8s ease;
+}
+
+.custom-card.show{
+    opacity: 1;
+    transform: translateY(0);
+}
+        </style>
+
+        <!-- MAIN CARDS --> 
+        <img class="project-img" src="mehttps://training-blog-uploads.internshala.com/blog/wp-content/uploads/2023/01/Web-Development-Projects-1.jpg.webp" alt="images">
+        <div class="card-grid">
+        <!-- Card 1 -->
+        <div class="custom-card">
+            <div class="card-image-wrapper">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhZp0tZ2I8pDgk54gA_WsgtYFAhDK-2T7vIPAtSU-Atw&s" class="card-og-img" alt="OG Image">
+            </div>
+            <div class="card-content">
+                <div class="card-header-row">
+                    <h3>SubTools</h3>
+                </div>
+                <button class="card-btn" onclick="window.location.href='https://subtools.netlify.app'"><i class="fab fa-github"></i> View Project</button>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="custom-card">
+            <div class="card-image-wrapper">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFTBSiYdte6B5LQNKDPAg9pIiNCH1u83ndtv4knJGGBQ&s" class="card-og-img" alt="OG Image">
+            </div>
+            <div class="card-content">
+                <div class="card-header-row">
+                    <h3>Top CSC</h3>
+                </div>
+                <button class="card-btn" onclick="window.location.href='https://topcsc.netlify.app'"><i class="fab fa-github"></i> View Project</button>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="custom-card">
+            <div class="card-image-wrapper">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTu6-kmNh5SzwFZhBh-KWiRGJdGjRVTpSR2-CY4Xf-1sw&s=10" class="card-og-img" alt="OG Image">
+            </div>
+            <div class="card-content">
+                <div class="card-header-row">
+                    <h3>A1 Market</h3>
+                </div>
+                <button class="card-btn" onclick="window.location.href='https://a1market.netlify.app'"><i class="fab fa-github"></i> View Project</button>
+            </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="custom-card">
+            <div class="card-image-wrapper">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXVA0id2HPffL8vBQDChsVZH7NNexQ7nRxr7FC6dD_PQ&s=10" class="card-og-img" alt="OG Image">
+            </div>
+            <div class="card-content">
+                <div class="card-header-row">
+                    <h3>Abhi QR 2.0</h3>
+                </div>
+                <button class="card-btn" onclick="window.location.href='https://abhiqr.netlify.app'"><i class="fab fa-github"></i> View Project</button>
+            </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="custom-card">
+            <div class="card-image-wrapper">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkchq6-ugGBK_NH0Hn5TM0MktzBTQQiMZc10zk9nm82A&s=10" class="card-og-img" alt="OG Image">
+            </div>
+            <div class="card-content">
+                <div class="card-header-row">
+                    <h3>BTEUP Official</h3>
+                </div>
+                <button class="card-btn" onclick="window.location.href='https://bteup1.netlify.app'"><i class="fab fa-github"></i> View Project</button>
+            </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="custom-card ">
+            <div class="card-image-wrapper">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwMMlMka37oHj8OddX9tTkjFDGWg0Gs7GpozMr698dlw&s=10" class="card-og-img" alt="OG Image">
+            </div>
+            <div class="card-content">
+                <div class="card-header-row">
+                    <h3>DJ AD Remix</h3>
+                </div>
+                <button class="card-btn" onclick="window.location.href='https://djadremix.netlify.app'"><i class="fab fa-github"></i> View Project</button>
+            </div>
+        </div>
+
+        <!-- Card 7 -->
+        <div class="custom-card">
+            <div class="card-image-wrapper">
+                <img src="https://ravitamedicare.com/assets/medicareLogo-bp5VlmvJ.webp" class="card-og-img" alt="OG Image">
+            </div>
+            <div class="card-content">
+                <div class="card-header-row">
+                    <h3>Ravita Medicare Lko</h3>
+                </div>
+                <button class="card-btn" onclick="window.location.href='https://ravitamedicare.com'"><i class="fab fa-github"></i> View Project</button>
+            </div>
+        </div>
+
+        <!-- Card 8 -->
+        <div class="custom-card">
+            <div class="card-image-wrapper">
+                <img src="https://srisaiintercollege.in/img/Logo.png" class="card-og-img" alt="OG Image">
+            </div>
+            <div class="card-content">
+                <div class="card-header-row">
+                    <h3>Sai Inter College</h3>
+                </div>
+                <button class="card-btn" onclick="window.location.href='https://srisaiintercollege.in'"><i class="fab fa-github"></i> View Project</button>
+            </div>
+        </div>
+
+        <!-- Card 9 -->
+        <div class="custom-card">
+            <div class="card-image-wrapper">
+                <img src="http://www.mdcolleges.co.in/assets/img/campuses/campus-1.jpg" class="card-og-img" alt="OG Image">
+            </div>
+            <div class="card-content">
+                <div class="card-header-row">
+                    <h3>MD College Bbk</h3>
+                </div>
+                <button class="card-btn" onclick="window.location.href='http://mdcolleges.co.in'"><i class="fab fa-github"></i> View Project</button>
+            </div>
+        </div>
+
+        <!-- Card 10 -->
+        <div class="custom-card">
+            <div class="card-image-wrapper">
+                <img src="https://flyer.franciscanecare.net/Images/logo/071215053208LCIC_Lucknow_logo.png" class="card-og-img" alt="OG Image">
+            </div>
+            <div class="card-content">
+                <div class="card-header-row">
+                    <h3>Loreto College Lko</h3>
+                </div>
+                <button class="card-btn" onclick="window.location.href='https://lucknowloreto.com'"><i class="fab fa-github"></i> View Project</button>
+            </div>
+        </div>
+            
+            <!-- Card 11 -->
+        <div class="custom-card">
+            <div class="card-image-wrapper">
+                <img src="https://iskconlucknow.org/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdguhsmyrh%2Fimage%2Fupload%2Fv1772872478%2Fiskcon_lucknow_rdmlcf.png&w=1200&q=75" class="card-og-img" alt="OG Image">
+            </div>
+            <div class="card-content">
+                <div class="card-header-row">
+                    <h3>ISKCON Lko</h3>
+                </div>
+                <button class="card-btn" onclick="window.location.href='https://iskconlucknow.org'"><i class="fab fa-github"></i> View Project</button>
+            </div>
+        </div>
+            
+            <!-- Card 12 -->
+        <div class="custom-card">
+            <div class="card-image-wrapper">
+                <img src="https://easytalklko.com/wp-content/uploads/2026/02/cropped-WhatsApp-Image-2026-02-12-at-15.45.18-1.jpeg" class="card-og-img" alt="OG Image">
+            </div>
+            <div class="card-content">
+                <div class="card-header-row">
+                    <h3>Easy Talk Lko</h3>
+                </div>
+                <button class="card-btn" onclick="window.location.href='https://easytalklko.com'"><i class="fab fa-github"></i> View Project</button>
+            </div>
+        </div>
+            
+            <!-- Card 13 -->
+        <div class="custom-card">
+            <div class="card-image-wrapper">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQC4kB9YfmiAVt2yCDyR1_7K_kj9IVHB9h5nyugUMWauw&s=10" class="card-og-img" alt="OG Image">
+            </div>
+            <div class="card-content">
+                <div class="card-header-row">
+                    <h3>Digipodium Lko</h3>
+                </div>
+                <button class="card-btn" onclick="window.location.href='https://digipodium.com'"><i class="fab fa-github"></i> View Project</button>
+            </div>
+        </div>
+            
+            <!-- Card 14 -->
+        <div class="custom-card">
+            <div class="card-image-wrapper">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOgeN3gg2WGiQ8m-22cOJPfkdIrzLPICj4vHCGmyty2Q&s" class="card-og-img" alt="OG Image">
+            </div>
+            <div class="card-content">
+                <div class="card-header-row">
+                    <h3>Om Institute Bbk</h3>
+                </div>
+                <button class="card-btn" onclick="window.location.href='https://ominstitutebarabanki.com'"><i class="fab fa-github"></i> View Project</button>
+            </div>
+        </div>
+            
+            <!-- Card 15 -->
+        <div class="custom-card">
+            <div class="card-image-wrapper">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpWGsUoyPFfp0fqnVkiDHV3YPigF9NdwQCq0t26xpsuQ&s=10" class="card-og-img" alt="OG Image">
+            </div>
+            <div class="card-content">
+                <div class="card-header-row">
+                    <h3>GD Pathalogy Bbk</h3>
+                </div>
+                <button class="card-btn" onclick="window.location.href='https://gd-lab.com'"><i class="fab fa-github"></i> View Project</button>
+            </div>
+        </div>
+            
+            <!-- Card 16 -->
+        <div class="custom-card">
+            <div class="card-image-wrapper">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROXIaFJSmnzvz83ipZp6aQW-sW2A5QVQbiHkM17TobGA&s=10" class="card-og-img" alt="OG Image">
+            </div>
+            <div class="card-content">
+                <div class="card-header-row">
+                    <h3>Balaji Computer Bbk</h3>
+                </div>
+                <button class="card-btn" onclick="window.location.href='https://sbccenter.github.io/sbccenter/index.html'"><i class="fab fa-github"></i> View Project</button>
+            </div>
+        </div>
+            
+            <!-- Card 17 -->
+        <div class="custom-card">
+            <div class="card-image-wrapper">
+                <img src="https://www.hotelmyriad.in/images/banner-22.jpg" class="card-og-img" alt="OG Image">
+            </div>
+            <div class="card-content">
+                <div class="card-header-row">
+                    <h3>Hotel Myriad Lko</h3>
+                </div>
+                <button class="card-btn" onclick="window.location.href='https://hotelmyriad.in'"><i class="fab fa-github"></i> View Project</button>
+            </div>
+        </div>
+            
+            <!-- Card 18 -->
+            <div class="custom-card">
+            <div class="card-image-wrapper">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9WPo-mFPYc6Glr42swg54OvGX507HB5XRO-kGEuAEuw&s=10" class="card-og-img" alt="OG Image">
+            </div>
+            <div class="card-content">
+                <div class="card-header-row">
+                    <h3>Bhagwati Printer Lko</h3>
+                </div>
+                <button class="card-btn" onclick="window.location.href='https://bhagwatiprinter.com'"><i class="fab fa-github"></i> View Project</button>
+            </div>
+        </div>
+    </div>
+
+   
+                <!-- Footer Start -->
+        <div class="footer wow fadeIn" data-wow-delay="0.3s">
+            <div class="container-fluid">
+                <div class="container">
+                    <div class="footer-info">
+                        <img src="img/adtech.png" height="auto" width="55%">
+                        <br><br>
+                        <h2>ADTech Software Solutions</h2>
+                        <h3>(Location: Barabanki District Uttar Pradesh India 225001)</h3>
+                        <div class="footer-menu">
+                            <p>+91 8005389500</p>
+                            <p>contact@adtech2021.in</p>
+                        </div>
+
+ <div class="footer-social">
+    <a href="mailto:help.adtech@protonmail.com" target="_blank">
+        <i class="fab fa-google"></i>
+    </a>
+
+    <a href="https://facebook.com/adtech2021.in" target="_blank">
+        <i class="fab fa-facebook"></i>
+    </a>
+
+    <a href="https://instagram.com/adtech2021.in" target="_blank">
+        <i class="fab fa-instagram"></i>
+    </a>
+
+    <a href="https://twitter.com/adtech2021_in" target="_blank">
+        <!-- Using Twitter/X icon -->
+        <i class="fab fa-twitter"></i>
+    </a>
+
+    <a href="https://linkedin.com/in/adtech2021-in" target="_blank">
+        <i class="fab fa-linkedin"></i>
+    </a>
+
+    <a href="https://github.com/adtech2021-in" target="_blank">
+        <i class="fab fa-github"></i>
+    </a>
+
+    <a href="https://youtube.com/@adtech2021_in" target="_blank">
+        <i class="fab fa-youtube"></i>
+    </a>
+</div>
+                    </div>
+                </div>
+                <div class="container copyright">
+                    <p>&copy; 2026 - All Rights Reserved | Designed & Developed with <a href="#">ADTech India</a></p>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+
+<script>
+const cards = document.querySelectorAll(".custom-card");
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+        } else {
+            entry.target.classList.remove("show"); // Reset when scrolling away
+        }
+    });
+}, {
+    threshold: 0.2
+});
+
+cards.forEach(card => observer.observe(card));
+</script>
+        
+        <!-- Back to top button -->
+        <a href="#" class="btn back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/wow/wow.min.js"></script>
+        <script src="lib/waypoints/waypoints.min.js"></script>
+        <script src="lib/typed/typed.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="lib/isotope/isotope.pkgd.min.js"></script>
+        <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+        <!-- Template Javascript -->
+        <script src="main.js"></script>
+    </body>
+</html> 
