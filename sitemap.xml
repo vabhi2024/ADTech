@@ -36,4 +36,11 @@
     <priority>0.80</priority>
   </url>
 
+  <!-- Project Page -->
+  <url>
+    <loc>https://adtech2021.netlify.app/project.aspx.html</loc>
+    <lastmod>2026-05-28</lastmod>
+    <priority>0.80</priority>
+  </url>
+
 </urlset>
