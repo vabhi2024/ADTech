@@ -495,21 +495,24 @@
 
 
 <script>
-const cards = document.querySelectorAll(".custom-card");
+document.addEventListener("DOMContentLoaded", () => {
+    const cards = document.querySelectorAll(".custom-card");
 
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add("show");
-        } else {
-            entry.target.classList.remove("show"); // Reset when scrolling away
-        }
+    const observer = new IntersectionObserver((entries, observerInstance) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("show");                
+                     observerInstance.unobserve(entry.target); 
+            } else {
+                entry.target.classList.remove("show"); 
+            }
+        });
+    }, {
+        threshold: 0.2
     });
-}, {
-    threshold: 0.2
-});
 
-cards.forEach(card => observer.observe(card));
+    cards.forEach(card => observer.observe(card));
+});
 </script>
         
         <!-- Back to top button -->
