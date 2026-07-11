@@ -224,68 +224,204 @@ select {
       </div>
     </div>
 
-    <!-- Updated Plans -->
-    <select id="plan" onchange="updatePayment()">
-        <option value="200" hidden>Select Plans +</option>
-        <option value="2">1 Month – ₹99.00</option>
-        <option value="3">3 Months – ₹199.00</option>
-        <option value="6">6 Months – ₹499.00</option>
-        <option value="12">1 Year – ₹999.00</option>
-        <option value="24">2 Years – ₹1499.00</option>
-    </select>
+   <!-- 1. Domain Selector (55 Clean Extensions) -->
+<select id="domain" onchange="updatePayment()">
+    <!-- Top Level & Country Domains -->
+     <option value="" hidden>Select Domains</option>
+    <option value="in">.in</option>
+    <option value="com">.com</option>
+    <option value="org">.org</option>
+    <option value="net">.net</option>
+    <option value="co">.co</option>
+    <option value="biz">.biz</option>
+    <option value="info">.info</option>
+    <option value="us">.us</option>
+    <option value="uk">.co.uk</option>
+    <option value="ca">.ca</option>
 
-    <p id="amtText">──── 00 ────</p>
+    <!-- Tech Extensions -->
+    <option value="tech">.tech</option>
+    <option value="online">.online</option>
+    <option value="xyz">.xyz</option>
+    <option value="dev">.dev</option>
+    <option value="app">.app</option>
+    <option value="io">.io</option>
+    <option value="ai">.ai</option>
+    <option value="code">.code</option>
+    <option value="digital">.digital</option>
+    <option value="systems">.systems</option>
 
-    <div class="qr-box">
-        <img id="qrImg" class="qr-img" 
-             src="https://api.qrserver.com/v1/create-qr-code/?size=270x270&data=upi://pay?pa=adxmow@axl&pn=Domain%20Renewal&am=0&cu=INR" />
-    </div>
- <br>
-    <a id="payBtn" onclick="return validatePayment()" href="#">
-        <button class="btnn"><i class="fa fa-chevron-circle-right"></i> MAKE PAYMENT</button>
-    </a>
+    <!-- Indian Corporate Extensions -->
+    <option value="co_in">.co.in</option>
+    <option value="net_in">.net.in</option>
+    <option value="org_in">.org.in</option>
+
+    <!-- Business & Agency Extensions -->
+    <option value="agency">.agency</option>
+    <option value="company">.company</option>
+    <option value="solutions">.solutions</option>
+    <option value="ltd">.ltd</option>
+    <option value="finance">.finance</option>
+    <option value="capital">.capital</option>
+    <option value="market">.market</option>
+
+    <!-- Web & Media Extensions -->
+    <option value="store">.store</option>
+    <option value="shop">.shop</option>
+    <option value="site">.site</option>
+    <option value="website">.website</option>
+    <option value="blog">.blog</option>
+    <option value="news">.news</option>
+    <option value="live">.live</option>
+    <option value="space">.space</option>
+    <option value="club">.club</option>
+    <option value="studio">.studio</option>
+
+    <!-- Professional & Modern Extensions -->
+    <option value="pro">.pro</option>
+    <option value="expert">.expert</option>
+    <option value="guru">.guru</option>
+    <option value="media">.media</option>
+    <option value="design">.design</option>
+    <option value="photography">.photography</option>
+    <option value="work">.work</option>
+    <option value="buzz">.buzz</option>
+    <option value="click">.click</option>
+    <option value="link">.link</option>
+    <option value="top">.top</option>
+    <option value="icu">.icu</option>
+    <option value="vip">.vip</option>
+    <option value="win">.win</option>
+    <option value="fun">.fun</option>
+</select>
+
+<!-- 2. Plan Selector -->
+<select id="plan" onchange="updatePayment()">
+    <option value="" hidden>Select Plans</option>
+    <option value="1">1 Month</option>
+    <option value="3">3 Months</option>
+    <option value="6">6 Months</option>
+    <option value="12">1 Year</option>
+    <option value="24">2 Years</option>
+    <option value="36">3 Years</option>
+    <option value="60">5 Years</option>
+</select>
+
+<!-- Display Price -->
+<p id="amtText">Payable Amount : ₹0.00</p>
+
+<!-- Dynamic QR Code Box -->
+<div class="qr-box">
+    <img id="qrImg" class="qr-img" src="" alt="QR Code" />
+</div>
+<br>
+
+<!-- Payment Button -->
+<a id="payBtn" onclick="return validatePayment()" href="#">
+    <button class="btnn"><i class="fa fa-chevron-circle-right"></i> MAKE PAYMENT</button>
+</a>
+
 </div>
 
 <script>
+// GoDaddy Tier Pricing Matrix for 55 Clean Domains
+const domainPrices = {
+    "in": { "1": 99, "3": 299, "6": 559, "12": 999, "24": 1599, "36": 2999, "60": 4999 },
+    "co_in": { "1": 79, "3": 249, "6": 459, "12": 799, "24": 1299, "36": 2499, "60": 3999 },
+    "net_in": { "1": 79, "3": 249, "6": 459, "12": 799, "24": 1299, "36": 2499, "60": 3999 },
+    "org_in": { "1": 79, "3": 249, "6": 459, "12": 799, "24": 1299, "36": 2499, "60": 3999 },
+    "com": { "1": 149, "3": 399, "6": 799, "12": 1399, "24": 2499, "36": 4299, "60": 6999 },
+    "org": { "1": 199, "3": 499, "6": 899, "12": 1599, "24": 2799, "36": 4599, "60": 7499 },
+    "net": { "1": 169, "3": 449, "6": 849, "12": 1499, "24": 2699, "36": 4499, "60": 7299 },
+    "co": { "1": 249, "3": 649, "6": 1199, "12": 1999, "24": 3499, "36": 5999, "60": 9999 },
+    "biz": { "1": 139, "3": 369, "6": 699, "12": 1299, "24": 2299, "36": 3999, "60": 6499 },
+    "info": { "1": 119, "3": 329, "6": 599, "12": 1099, "24": 1899, "36": 3299, "60": 5499 },
+    "us": { "1": 129, "3": 349, "6": 649, "12": 1199, "24": 1999, "36": 3499, "60": 5999 },
+    "uk": { "1": 119, "3": 319, "6": 599, "12": 1099, "24": 1899, "36": 3299, "60": 5499 },
+    "ca": { "1": 149, "3": 399, "6": 799, "12": 1399, "24": 2499, "36": 4299, "60": 6999 },
+    "ai": { "1": 799, "3": 2199, "6": 4299, "12": 7499, "24": 13999, "36": 21999, "60": 34999 },
+    "io": { "1": 499, "3": 1399, "6": 2599, "12": 4599, "24": 8499, "36": 12999, "60": 19999 },
+    "dev": { "1": 189, "3": 549, "6": 999, "12": 1799, "24": 3199, "36": 5299, "60": 8499 },
+    "app": { "1": 179, "3": 499, "6": 949, "12": 1699, "24": 2999, "36": 4999, "60": 7999 },
+    "tech": { "1": 89, "3": 269, "6": 499, "12": 899, "24": 1699, "36": 2799, "60": 4499 },
+    "code": { "1": 199, "3": 549, "6": 999, "12": 1799, "24": 3199, "36": 5299, "60": 8499 },
+    "digital": { "1": 159, "3": 449, "6": 849, "12": 1499, "24": 2599, "36": 4299, "60": 6999 },
+    "systems": { "1": 169, "3": 479, "6": 899, "12": 1599, "24": 2799, "36": 4599, "60": 7499 },
+    "agency": { "1": 159, "3": 449, "6": 849, "12": 1499, "24": 2599, "36": 4299, "60": 6999 },
+    "company": { "1": 149, "3": 399, "6": 799, "12": 1399, "24": 2499, "36": 4299, "60": 6999 },
+    "solutions": { "1": 169, "3": 479, "6": 899, "12": 1599, "24": 2799, "36": 4599, "60": 7499 },
+    "ltd": { "1": 139, "3": 389, "6": 749, "12": 1299, "24": 2299, "36": 3899, "60": 6299 },
+    "finance": { "1": 249, "3": 699, "6": 1299, "12": 2299, "24": 3999, "36": 6499, "60": 10499 },
+    "capital": { "1": 259, "3": 729, "6": 1349, "12": 2399, "24": 4199, "36": 6799, "60": 10999 },
+    "market": { "1": 179, "3": 499, "6": 949, "12": 1699, "24": 2999, "36": 4999, "60": 7999 },
+    "store": { "1": 99, "3": 299, "6": 559, "12": 999, "24": 1699, "36": 2899, "60": 4699 },
+    "shop": { "1": 119, "3": 349, "6": 649, "12": 1099, "24": 1899, "36": 3299, "60": 5499 },
+    "site": { "1": 69, "3": 199, "6": 399, "12": 699, "24": 1299, "36": 2199, "60": 3499 },
+    "website": { "1": 79, "3": 229, "6": 449, "12": 799, "24": 1499, "36": 2499, "60": 3999 },
+    "blog": { "1": 139, "3": 389, "6": 749, "12": 1299, "24": 2299, "36": 3899, "60": 6299 },
+    "news": { "1": 199, "3": 549, "6": 999, "12": 1799, "24": 3199, "36": 5299, "60": 8499 },
+    "live": { "1": 129, "3": 369, "6": 699, "12": 1199, "24": 2199, "36": 3699, "60": 5999 },
+    "space": { "1": 69, "3": 199, "6": 399, "12": 699, "24": 1299, "36": 2199, "60": 3499 },
+    "club": { "1": 99, "3": 299, "6": 559, "12": 999, "24": 1699, "36": 2899, "60": 4699 },
+    "studio": { "1": 169, "3": 479, "6": 899, "12": 1599, "24": 2799, "36": 4599, "60": 7499 },
+    "pro": { "1": 149, "3": 399, "6": 799, "12": 1399, "24": 2499, "36": 4299, "60": 6999 },
+    "expert": { "1": 249, "3": 699, "6": 1299, "12": 2299, "24": 3999, "36": 6499, "60": 10499 },
+    "guru": { "1": 199, "3": 549, "6": 999, "12": 1799, "24": 3199, "36": 5299, "60": 8499 },
+    "media": { "1": 179, "3": 499, "6": 949, "12": 1699, "24": 2999, "36": 4999, "60": 7999 },
+    "design": { "1": 199, "3": 549, "6": 999, "12": 1799, "24": 3199, "36": 5299, "60": 8499 },
+    "photography": { "1": 249, "3": 699, "6": 1299, "12": 2299, "24": 3999, "36": 6499, "60": 10499 },
+    "work": { "1": 69, "3": 199, "6": 399, "12": 699, "24": 1299, "36": 2199, "60": 3499 },
+    "buzz": { "1": 79, "3": 229, "6": 449, "12": 799, "24": 1499, "36": 2499, "60": 3999 },
+    "click": { "1": 69, "3": 199, "6": 399, "12": 699, "24": 1299, "36": 2199, "60": 3499 },
+    "link": { "1": 89, "3": 249, "6": 469, "12": 849, "24": 1599, "36": 2699, "60": 4299 },
+    "xyz": { "1": 69, "3": 199, "6": 399, "12": 699, "24": 1299, "36": 2199, "60": 3499 },
+    "online": { "1": 79, "3": 229, "6": 449, "12": 799, "24": 1499, "36": 2499, "60": 3999 },
+    "top": { "1": 59, "3": 179, "6": 349, "12": 599, "24": 1099, "36": 1899, "60": 2999 },
+    "icu": { "1": 59, "3": 179, "6": 349, "12": 599, "24": 1099, "36": 1899, "60": 2999 },
+    "vip": { "1": 149, "3": 399, "6": 799, "12": 1399, "24": 2499, "36": 4299, "60": 6999 },
+    "win": { "1": 69, "3": 199, "6": 399, "12": 699, "24": 1299, "36": 2199, "60": 3499 },
+    "fun": { "1": 79, "3": 229, "6": 449, "12": 799, "24": 1499, "36": 2499, "60": 3999 }
+};
+
 function updatePayment() {
+    const domain = document.getElementById("domain").value;
     const plan = document.getElementById("plan").value;
+    
     let amount = 0.00;
-
-    if (plan === "2") amount = 99.00;       // 1 Month
-    if (plan === "3") amount = 199.00;      // 3 Months
-    if (plan === "6") amount = 499.00;      // 6 Months
-    if (plan === "12") amount = 999.00;     // 1 Year
-    if (plan === "24") amount = 1499.00;    // 2 Years
-
-    const upiID = "adxmow@axl";
-    const tnMessage = "This payment is being deducted for connecting your website domain. Team – ADTech India";
-
-    const upiLink =
-        `upi://pay?pa=${upiID}&pn=Domain%20Connecting&am=${amount}&cu=INR&tn=${encodeURIComponent(tnMessage)}`;
-
-    document.getElementById("payBtn").setAttribute("href", upiLink);
-
-    const qrURL =
-        `https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=${encodeURIComponent(upiLink)}`;
-
-    document.getElementById("qrImg").src = qrURL;
-
-    document.getElementById("amtText").innerHTML = `Payable Amount : ₹${amount}`;
-}
-
-// Prevent Payment Without Plan Selection
-function validatePayment() {
-    const plan = document.getElementById("plan").value;
-
-    if (plan === "200") {
-        alert("Please select a plan first!");
-        return false; // Block payment
+    if (domainPrices[domain] && domainPrices[domain][plan]) {
+        amount = domainPrices[domain][plan];
     }
 
-    return true; // Continue payment
+    const upiID = "adxmow@axl";
+    const formattedDomain = domain.replace('_', '.');
+    const tnMessage = `Domain .${formattedDomain.toUpperCase()} + Hosting setup (${plan}M) - ADTech India`;
+
+    const upiLink = `upi://pay?pa=${upiID}&pn=ADTech%20India&am=${amount}&cu=INR&tn=${encodeURIComponent(tnMessage)}`;
+
+    document.getElementById("payBtn").setAttribute("href", upiLink);
+    
+    const qrURL = `https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=${encodeURIComponent(upiLink)}`;
+    document.getElementById("qrImg").src = qrURL;
+
+    document.getElementById("amtText").innerHTML = `Payable Amount : <b>₹${amount.toFixed(2)}</b>`;
 }
+
+function validatePayment() {
+    const domain = document.getElementById("domain").value;
+    const plan = document.getElementById("plan").value;
+
+    if (!domain || !plan) {
+        alert("Please select both Domain and Plan options first!");
+        return false;
+    }
+    return true;
+}
+
+window.onload = function() {
+    updatePayment();
+};
 </script>
-      
+     
                 <!-- Footer Start -->
         <div class="footer wow fadeIn" data-wow-delay="0.3s">
             <div class="container-fluid">
@@ -340,7 +476,7 @@ function validatePayment() {
         <!-- Footer End -->
         
         
-        <!-- Back to top button -->
+               <!-- Back to top button -->
         <a href="#" class="btn back-to-top"><i class="fa fa-chevron-up"></i></a>
         
         <!-- JavaScript Libraries -->
