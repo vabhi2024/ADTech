@@ -197,13 +197,20 @@ select {
 </style>
 
 
-
 <div class="box">
-   <img class="img" src="data:image/svg+xml;base64,
-        PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48ZyBzdHJva2U9IiNmZjAyMDIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIyIj48cGF0aCBmaWxsPSIjZmYwMjAyIiBmaWxsLW9wYWNpdHk9IjAgIHN0cm9rZS1kYXNoYXJyYXk9IjYwIiBkPSJNMTIgM2M0Ljk3IDAgOSA0LjAzIDkgOWMwIDQuOTcgLTQuMDMgOSAtOSA5Yy00Ljk3IDAgLTkgLTQuMDMgLTkgLTljMCAtNC45NyA0LjAzIC05IDkgLTlaIj48YW5pbWF0ZSBmaWxsPSJmcmVlemUiIGF0dHJpYnV0ZU5hbWU9InN0cm9rZS1kYXNob2Zmc2V0IiBkdXI9IjAuNnMiIHZhbHVlcz0iNjA7MCIvPjxhbmltYXRlIGZpbGw9ImZyZWV6ZSIgYXR0cmlidXRlTmFtZT0iZmlsbC1vcGFjaXR5IiBiZWdpbj0iMXMiIGR1cj0iMC4xNXMiIHRvPSIwLjMiLz48L3BhdGg+PGcgZmlsbD0ibm9uZSI+PHBhdGggc3Ryb2tlLWRhc2hhcnJheT0iOCIgc3Ryb2tlLWRhc2hvZmZzZXQ9IjgiIGQ9Ik0xMiA3djYiPjxhbmltYXRlIGF0dHJpYnV0ZU5hbWU9InN0cm9rZS13aWR0aCIgYmVnaW49IjAuN3MiIGR1cj0iM3MiIGtleVRpbWVzPSIwOzAuMTswLjI7MC4zOzEiIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIiB2YWx1ZXM9IjI7MzszOzI7MiIvPjxhbmltYXRlIGZpbGw9ImZyZWV6ZSIgYXR0cmlidXRlTmFtZT0ic3Ryb2tlLWRhc2hvZmZzZXQiIGJlZ2luPSIwLjdzIiBkdXI9IjAuMnMiIHRvPSIwIi8+PC9wYXRoPjxwYXRoIHN0cm9rZS1kYXNoYXJyYXk9IjQiIHN0cm9rZS1kYXNob2Zmc2V0PSI0IiBkPSJNMTIgMTd2MC4wMSI+PGFuaW1hdGUgZmlsbD0iZnJlZXplIiBhdHRyaWJ1dGVOYW1lPSJzdHJva2UtZGFzaG9mZnNldCIgYmVnaW49IjAuN3MiIGR1cj0iMC4ycyIgdG89IjAiLz48YW5pbWF0ZSBhdHRyaWJ1dGVOYW1lPSJzdHJva2Utd2lkdGgiIGJlZ2luPSIxcyIgZHVyPSIzcyIga2V5VGltZXM9IjA7MC4xOzAuMjswLjM7MSIgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiIHZhbHVlcz0iMjszOzM7MjsyIi8+PC9wYXRoPjwvZz48L2c+PC9zdmc+"
-    alt="error">
+   <!-- Replace your old img tag with this inline SVG -->
+   <svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" viewBox="0 0 24 24" class="img">
+       <g stroke="#ff0202" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+           <path fill="#ff0202" fill-opacity="0.3" stroke-dasharray="60" d="M12 3c4.97 0 9 4.03 9 9s-4.03 9-9 9s-9-4.03-9-9s4.03-9 9-9Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.6s" values="60;0"/></path>
+           <g fill="none">
+               <path stroke-dasharray="8" stroke-dashoffset="8" d="M12 7v6"><animate attributeName="stroke-width" begin="0.7s" dur="3s" keyTimes="0;0.1;0.2;0.3;1" repeatCount="indefinite" values="2;3;3;2;2"/><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.7s" dur="0.2s" to="0"/></path>
+               <path stroke-dasharray="4" stroke-dashoffset="4" d="M12 17v0.01"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.7s" dur="0.2s" to="0"/><animate attributeName="stroke-width" begin="1s" dur="3s" keyTimes="0;0.1;0.2;0.3;1" repeatCount="indefinite" values="2;3;3;2;2"/></path>
+           </g>
+       </g>
+   </svg>
 
-    <h3 class="h3-title">Your Website is ready for hosting. Please complete the process immediately to go live.</h3>
+   <h3 class="h3-title">Your Website is ready for hosting...</h3>
+
 
     <div class="stepper-wrapper">
       <div class="stepper-item completed">
@@ -324,7 +331,7 @@ select {
 <script>
 // GoDaddy Live Market Price Matrix (Inclusive of 1st Year Promo + Renewal calculations)
 const domainPrices = {
-    "in": { "1": 99, "2": 898, "3": 1699, "5": 3299, "10": 7299 }, // Set to ₹99 for 1st year promo
+    "in": { "1": 299, "2": 898, "3": 1699, "5": 3299, "10": 7299 }, // Set to ₹99 for 1st year promo
     "co_in": { "1": 499, "2": 1199, "3": 1899, "5": 3299, "10": 6799 },
     "net_in": { "1": 499, "2": 1199, "3": 1899, "5": 3299, "10": 6799 },
     "org_in": { "1": 499, "2": 1199, "3": 1899, "5": 3299, "10": 6799 },
