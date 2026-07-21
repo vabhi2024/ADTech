@@ -208,7 +208,7 @@ select {
        </g>
    </svg>
 
-   <h3 class="h3-title">Your Website is ready for hosting. Please complete the process immediately to go live.</h3>
+   <h3 class="h3-title">Your Website is ready for hosting. Please complete the require process immediately, To go live on Server.</h3>
 
 
     <div class="stepper-wrapper">
@@ -222,7 +222,7 @@ select {
       </div>
       <div class="stepper-item active">
         <div class="step-counter">3</div>
-        <div class="step-name">Payment Pending</div>
+        <div class="step-name">Domain Pending</div>
       </div>
       <div class="stepper-item">
         <div class="step-counter">4</div>
@@ -328,7 +328,7 @@ select {
 </div>
 
 <script>
-// GoDaddy Live Market Price Matrix (Inclusive of 1st Year Promo + Renewal calculations)
+// Domain Live Market Price Matrix (Inclusive of 1st Year Promo + Renewal calculations)
 const domainPrices = {
     "in": { "1": 299, "2": 898, "3": 1699, "5": 3299, "10": 7299 }, // Set to ₹99 for 1st year promo
     "co_in": { "1": 499, "2": 1199, "3": 1899, "5": 3299, "10": 6799 },
@@ -426,7 +426,7 @@ function validatePayment() {
         return false;
     }
     if (domain === "ai" && plan === "1") {
-        alert("GoDaddy policy restriction: .AI domain requires minimum 2 Years term!");
+        alert("Domain policy restriction: .ai domain requires minimum 2 Years term!");
         return false;
     }
     return true;
