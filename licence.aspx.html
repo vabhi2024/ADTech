@@ -25,7 +25,7 @@
     </head>
 
     <body data-spy="scroll" data-target=".navbar" data-offset="51">
-                <!-- Nav Bar Start -->
+        <!-- Nav Bar Start -->
         <div class="navbar navbar-expand-lg bg-light navbar-light">
             <div class="container-fluid">
                 <a href="index.html" class="navbar-brand">ADTech India</a>
@@ -71,224 +71,322 @@
         <!-- Nav Bar End -->
 
 <style>
-/* GRID */
-.grid {
-  display: grid;
-  gap: 15px;
-  max-width: 100%;
-  margin: auto;
-  padding: 15px;
-  grid-template-columns: 1fr;
+/* SMOOTH SCROLL ENABLER */
+html {
+  scroll-behavior: smooth;
 }
 
-/* Tablet (≥ 600px) */
-@media (min-width: 600px) {
-  .grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+/* ALL RED THEME & STYLES */
+.services-section {
+  padding: 50px 15px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-/* Desktop (≥ 1024px) */
-@media (min-width: 1024px) {
-  .grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
+/* ALL HEADINGS RED */
+.services-title {
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #dc3545 !important;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 3px solid #dc3545;
+  display: inline-block;
+  padding-bottom: 5px;
 }
 
-/* CARD */
-.card {
-  background: #fff;
-  border-radius: 10px;
-  border: 1px solid black;
-  overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  opacity: 0;
-  transform: translateY(40px) scale(0.95);
-  transition: all 0.6s ease;
+.services-subtitle {
+  text-align: center;
+  color: #b02a37 !important;
+  font-size: 15px;
+  margin-bottom: 35px;
+  font-weight: 500;
 }
 
-/* Active */
-.card.show {
-  opacity: 1;
-  transform: translateY(0) scale(1);
-}
-
-/* IMAGE */
-.card img {
-  width: 100%;
-  height: 150px;
-  object-fit: cover;
-  border-bottom: 1px solid black;
-  transition: transform 0.4s ease;
-}
-
-.card:hover img {
-  transform: scale(1.05);
-}
-
-/* CONTENT */
-.content {
-  padding: 15px;
+.title-container {
   text-align: center;
 }
 
-.content h2 {
-  font-weight: 600;
-  font-size: 18px;
-  margin: 10px 0 5px;
+/* Table Customization with Red Theme */
+.table-custom {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(220, 53, 69, 0.2);
+  border: 1px solid #dc3545;
+  transition: transform 0.3s ease;
 }
 
-.content p {
+.table-custom:hover {
+  transform: translateY(-3px);
+}
+
+.table-custom th {
+  background: #dc3545 !important;
+  color: #fff !important;
+  border: none;
+  font-weight: 600;
+  text-transform: uppercase;
   font-size: 14px;
+}
+
+.table-custom td {
+  border-color: #f8d7da;
+  color: #495057;
+}
+
+.text-red {
+  color: #dc3545 !important;
+}
+
+/* Card Box Styling & Animations */
+.info-card-box {
+  background: #fff;
+  border-radius: 10px;
+  padding: 24px;
+  border: 1px solid #f5c6cb;
+  box-shadow: 0 4px 12px rgba(220, 53, 69, 0.12);
+  height: 100%;
+  transition: all 0.4s ease;
+}
+
+.info-card-box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 22px rgba(220, 53, 69, 0.28);
+  border-color: #dc3545;
+}
+
+.info-card-box h4 {
+  font-size: 19px;
+  font-weight: 700;
+  color: #dc3545 !important;
+  margin-bottom: 12px;
+}
+
+.info-card-box p {
   color: #555;
 }
 
-/* BUTTON WRAPPER */
-.m-btn {
-  display: flex;
-  gap: 10px;
+.example-badge {
+  display: inline-block;
+  background: #dc3545 !important;
+  color: #ffffff !important;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 13px;
   margin-top: 10px;
+  font-weight: 600;
 }
 
-/* MODAL */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 999;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.75);
-  justify-content: center;
-  align-items: center;
-}
-
-.modal.show {
-  display: flex;
-}
-
-.modal img {
-  max-width: 95%;
-  max-height: 95%;
+/* Step Box Styling & Animations */
+.step-box {
+  background: #fff;
   border-radius: 10px;
- }
+  padding: 20px 15px;
+  text-align: center;
+  border: 1px solid #f5c6cb;
+  box-shadow: 0 4px 10px rgba(220, 53, 69, 0.1);
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.step-box:hover {
+  transform: scale(1.04);
+  border-color: #dc3545;
+}
+
+.step-box h5 {
+  color: #dc3545 !important;
+  font-weight: 700;
+}
+
+.step-num {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  background: #dc3545 !important;
+  color: white !important;
+  border-radius: 50%;
+  margin: 0 auto 12px;
+  font-weight: bold;
+  font-size: 16px;
+  box-shadow: 0 3px 8px rgba(220, 53, 69, 0.4);
+}
+
+/* SCROLL ANIMATION WITH AUTO-RESET */
+.scroll-animate {
+  opacity: 0;
+  transform: translateY(45px);
+  transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.scroll-animate.active {
+  opacity: 1;
+  transform: translateY(0);
+}
 </style>
 
-<br>
-<img src="licence/logo.jpg" alt="logo" height="auto" width="100%">
+<!-- FREELANCING SERVICES DETAILS SECTION START -->
+<section class="services-section">
 
-<main class="grid">
-  <div class="card">
-    <img src="licence/CRT_ISO_9001.jpg" alt="ISO 9001 Certificate">
-    <div class="content">
-      <h2>ISO 9001:2015 Certified</h2>
-      <p>Quality management certification.</p>
-      <div class="m-btn">
-        <button class="btn Download" onclick="downloadImage('licence/CRT_ISO_9001.jpg')">
-          <i class="fa fa-download"></i> Download
-        </button>
-        <button class="btn view" onclick="openImage('licence/CRT_ISO_9001.jpg')">
-          <i class="fa fa-eye"></i> View
-        </button>
+  <!-- 1. Categories -->
+  <div id="service" style="padding-top: 30px;">
+    <div class="title-container scroll-animate">
+      <h2 class="services-title">Core Technology Capabilities</h2>
+      <p class="services-subtitle">Enterprise-grade digital solutions tailored for startups and global enterprises.</p>
+    </div>
+    <div class="table-responsive table-custom mb-5 scroll-animate">
+      <table class="table table-bordered mb-0">
+        <thead>
+          <tr>
+            <th>Domain Category</th>
+            <th>Specialized Solutions Offered</th>
+            <th>Key Technical Deliverables</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong class="text-red">Web Engineering</strong></td>
+            <td>Full-Stack Web Applications, Enterprise Portals & SaaS Products</td>
+            <td>MERN / LAMP Stack Apps, Custom Headless CMS, RESTful API Integrations</td>
+          </tr>
+          <tr>
+            <td><strong class="text-red">Mobile App Development</strong></td>
+            <td>High-Performance iOS & Android Cross-Platform & Native Solutions</td>
+            <td>React Native & Flutter Apps, App Store Deployments, Secure Backend Systems</td>
+          </tr>
+          <tr>
+            <td><strong class="text-red">Cloud & Cyber Security</strong></td>
+            <td>Infrastructure Management, Server Hardening & Data Encryption</td>
+            <td>AWS / DigitalOcean Setup, Automated SSL/TLS Enforcement, Cloud Backup Pipelines</td>
+          </tr>
+          <tr>
+            <td><strong class="text-red">UI/UX Design Systems</strong></td>
+            <td>User-Centric Prototyping, Wireframing & Modern Design Systems</td>
+            <td>Figma Interactive Prototypes, Mobile-First Interfaces, High-Converting User Flows</td>
+          </tr>
+          <tr>
+            <td><strong class="text-red">AI & Automation</strong></td>
+            <td>Workflow Automation, Data Scraping & Intelligent AI Agents</td>
+            <td>Python Automation Scripts, Zapier / Make Webhooks, Custom AI Chatbot Solutions</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- 2. Flexible Engagement Models -->
+  <div id="booking" style="padding-top: 30px;">
+    <div class="title-container scroll-animate">
+      <h2 class="services-title">Flexible Engagement Models</h2>
+      <p class="services-subtitle">Transparent and tailored pricing structures designed to fit your business budget.</p>
+    </div>
+    <div class="row mb-5">
+      <div class="col-md-4 mb-3 scroll-animate">
+        <div class="info-card-box">
+          <h4>Fixed-Price Contracts</h4>
+          <p>Ideal for clearly defined scopes. Complete roadmap execution delivered within a guaranteed timeframe and flat budget.</p>
+          <span class="example-badge">Best For: Custom Website Builds, App MVPs, & System Setups</span>
+        </div>
+      </div>
+      <div class="col-md-4 mb-3 scroll-animate">
+        <div class="info-card-box">
+          <h4>Dedicated Hourly Billing</h4>
+          <p>Pay-as-you-go model perfect for evolving project demands, continuous feature updates, and immediate troubleshooting.</p>
+          <span class="example-badge">Best For: Code Audits, Maintenance, & On-Demand Bug Fixes</span>
+        </div>
+      </div>
+      <div class="col-md-4 mb-3 scroll-animate">
+        <div class="info-card-box">
+          <h4>Monthly Managed Retainer</h4>
+          <p>Secure dedicated engineering talent for continuous system optimization, platform management, and long-term scaling.</p>
+          <span class="example-badge">Best For: Long-Term Technology Partnership & Cloud Ops</span>
+        </div>
       </div>
     </div>
   </div>
 
-  <div class="card">
-    <img src="licence/CRT_ISO_27001.jpg" alt="ISO 27001 Certificate">
-    <div class="content">
-      <h2>ISO 27001:2022 Certified</h2>
-      <p>Security management certification.</p>
-      <div class="m-btn">
-        <button class="btn Download" onclick="downloadImage('licence/CRT_ISO_27001.jpg')">
-          <i class="fa fa-download"></i> Download
-        </button>
-        <button class="btn view" onclick="openImage('licence/CRT_ISO_27001.jpg')">
-          <i class="fa fa-eye"></i> View
-        </button>
+  <!-- 3. Project Delivery Lifecycle -->
+  <div id="experience" style="padding-top: 30px;">
+    <div class="title-container scroll-animate">
+      <h2 class="services-title">Agile Project Delivery Process</h2>
+      <p class="services-subtitle">A streamlined 5-step methodology ensuring perfection from concept to deployment.</p>
+    </div>
+    <div class="row mb-5">
+      <div class="col-md-2 col-6 mb-3 scroll-animate">
+        <div class="step-box">
+          <div class="step-num">1</div>
+          <h5>Discovery</h5>
+          <p class="small text-muted mb-0">In-depth requirement analysis & scope blueprinting.</p>
+        </div>
+      </div>
+      <div class="col-md-2 col-6 mb-3 scroll-animate">
+        <div class="step-box">
+          <div class="step-num">2</div>
+          <h5>Architecture</h5>
+          <p class="small text-muted mb-0">Tech stack mapping, wireframing & project proposal.</p>
+        </div>
+      </div>
+      <div class="col-md-3 col-6 mb-3 scroll-animate">
+        <div class="step-box">
+          <div class="step-num">3</div>
+          <h5>Agile Execution</h5>
+          <p class="small text-muted mb-0">Clean code development with real-time staging previews.</p>
+        </div>
+      </div>
+      <div class="col-md-3 col-6 mb-3 scroll-animate">
+        <div class="step-box">
+          <div class="step-num">4</div>
+          <h5>QA & Security</h5>
+          <p class="small text-muted mb-0">Speed optimization, vulnerability testing & SSL verification.</p>
+        </div>
+      </div>
+      <div class="col-md-2 col-12 mb-3 scroll-animate">
+        <div class="step-box">
+          <div class="step-num">5</div>
+          <h5>Deployment</h5>
+          <p class="small text-muted mb-0">Production launch, source code & master asset handover.</p>
+        </div>
       </div>
     </div>
   </div>
 
-  <div class="card">
-    <img src="licence/CRT_SSL.jpg" alt="SSL Certificate">
-    <div class="content">
-      <h2>SSL/TLS Secured Website</h2>
-      <p>Secure encrypted communication system.</p>
-      <div class="m-btn">
-        <button class="btn Download" onclick="downloadImage('licence/CRT_SSL.jpg')">
-          <i class="fa fa-download"></i> Download
-        </button>
-        <button class="btn view" onclick="openImage('licence/CRT_SSL.jpg')">
-          <i class="fa fa-eye"></i> View
-        </button>
+  <!-- 4. Operational & Trust Framework -->
+  <div id="about" style="padding-top: 30px;">
+    <div class="title-container scroll-animate">
+      <h2 class="services-title">Enterprise Security & Legal Standards</h2>
+      <p class="services-subtitle">How we protect your intellectual property and guarantee seamless project execution.</p>
+    </div>
+    <div class="row">
+      <div class="col-md-4 mb-3 scroll-animate">
+        <div class="info-card-box text-center">
+          <i class="fa fa-file-contract fa-2x text-red mb-3"></i>
+          <h4>Strict Legal Agreements</h4>
+          <p>Complete Non-Disclosure Agreements (NDAs) and IP ownership transfer contracts to protect your sensitive code and ideas.</p>
+        </div>
+      </div>
+      <div class="col-md-4 mb-3 scroll-animate">
+        <div class="info-card-box text-center">
+          <i class="fa fa-shield-alt fa-2x text-red mb-3"></i>
+          <h4>Secure Global Payments</h4>
+          <p>Transparent milestone invoicing backed by international payment systems like Wise, Stripe, and Direct Bank Transfers.</p>
+        </div>
+      </div>
+      <div class="col-md-4 mb-3 scroll-animate">
+        <div class="info-card-box text-center">
+          <i class="fa fa-tasks fa-2x text-red mb-3"></i>
+          <h4>Transparent Tracking</h4>
+          <p>Real-time project monitoring via Jira/Trello boards, dedicated Slack channels, and scheduled video milestone calls.</p>
+        </div>
       </div>
     </div>
   </div>
 
-  <div class="card">
-    <img src="licence/CRT_DMCA.jpg" alt="DMCA Certificate">
-    <div class="content">
-      <h2>DMCA Protected Content</h2>
-      <p>Prevents unauthorized copying and misuse.</p>
-      <div class="m-btn">
-        <button class="btn Download" onclick="downloadImage('licence/CRT_DMCA.jpg')">
-          <i class="fa fa-download"></i> Download
-        </button>
-        <button class="btn view" onclick="openImage('licence/CRT_DMCA.jpg')">
-          <i class="fa fa-eye"></i> View
-        </button>
-      </div>
-    </div>
-  </div>
+</section>
+<!-- FREELANCING SERVICES DETAILS SECTION END -->
 
-</main>
-
-<!-- MODAL -->
-<div id="imageModal" class="modal" onclick="closeModal()">
-  <img id="modalImg" src="" alt="Preview Image">
-</div>
-
-<script>
-function openImage(src) {
-  document.getElementById("modalImg").src = src;
-  document.getElementById("imageModal").classList.add("show");
-}
-
-function closeModal() {
-  document.getElementById("imageModal").classList.remove("show");
-}
-
-function downloadImage(src) {
-  const link = document.createElement("a");
-  link.href = src;
-  link.download = src.split('/').pop();
-  document.body.appendChild(link);
-  link.click();
-  document.body.removeChild(link);
-}
-
-//Scroll js
-document.addEventListener("DOMContentLoaded", () => {
-  const cards = document.querySelectorAll(".card");
-  if (cards.length === 0) return; 
-  const observer = new IntersectionObserver((entries, observerInstance) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("show");
-        observerInstance.unobserve(entry.target); // परफॉर्मेंस के लिए अच्छा है
-      }
-    });
-  }, { threshold: 0.2 });
-  cards.forEach(card => observer.observe(card));
-});
-</script>
-      
-                      <!-- Footer Start -->
+        <!-- Footer Start -->
         <div class="footer wow fadeIn" data-wow-delay="0.3s">
             <div class="container-fluid">
                 <div class="container">
@@ -341,7 +439,6 @@ document.addEventListener("DOMContentLoaded", () => {
         </div>
         <!-- Footer End -->
 
-
         <!-- Back to top button -->
         <a href="#" class="btn back-to-top"><i class="fa fa-chevron-up"></i></a>
 
@@ -355,6 +452,27 @@ document.addEventListener("DOMContentLoaded", () => {
         <script src="lib/owlcarousel/owl.carousel.min.js"></script>
         <script src="lib/isotope/isotope.pkgd.min.js"></script>
         <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+        <!-- Script for Scroll Animation with Auto-Reset -->
+        <script>
+          document.addEventListener("DOMContentLoaded", function () {
+            const animatedElements = document.querySelectorAll('.scroll-animate');
+
+            const observer = new IntersectionObserver((entries) => {
+              entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                  entry.target.classList.add('active');
+                } else {
+                  entry.target.classList.remove('active');
+                }
+              });
+            }, {
+              threshold: 0.15
+            });
+
+            animatedElements.forEach((el) => observer.observe(el));
+          });
+        </script>
 
         <!-- Template Javascript -->
         <script src="main.js"></script>
