@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>ADTech Software Solutions</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta name="keywords" content="ADTech India, ADTech Software Services, ADTech Software Solutions, ADTech2021.in, Software Development, Web Development, Technical and Digital Services">
+        <meta name="description" content="ADTech India™ – A professional Software Services and Solutions, The Company Offering Web Development, Digital Services, and IT Consulting.">  
+      
+      <!-- Favicon -->
+        <link href="favicon.png" rel="icon">
+
+        <!-- Google Font -->
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+        <!-- CSS Libraries -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <link href="lib/animate/animate.min.css" rel="stylesheet">
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="style.css" rel="stylesheet">
+    </head>
+
+    <body data-spy="scroll" data-target=".navbar" data-offset="51">
+                <!-- Nav Bar Start -->
+        <div class="navbar navbar-expand-lg bg-light navbar-light">
+            <div class="container-fluid">
+                <a href="index.html" class="navbar-brand">ADTech India</a>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                    <div class="navbar-nav ml-auto">
+                       <a href="javascript:window.history.back();" class="nav-item nav-link active">
+                            <i class="fa fa-home"></i> Home</a>
+
+                        <a href="#about" class="nav-item nav-link">
+                            <i class="fa fa-user"></i> About</a>
+
+                        <a href="#service" class="nav-item nav-link">
+                            <i class="fa fa-cogs"></i> Service</a>
+
+                        <a href="#experience" class="nav-item nav-link">
+                           <i class="fa fa-briefcase"></i> Experience</a>
+
+                        <a href="#portfolio" class="nav-item nav-link">
+                            <i class="fa fa-folder-open"></i> Projects</a>
+
+                          <a href="#booking" class="nav-item nav-link">
+                            <i class="fa fa-tags"></i> Booking</a>
+
+                        <a href="#review" class="nav-item nav-link">
+                            <i class="fa fa-star"></i> Review</a>
+
+                        <a href="#team" class="nav-item nav-link">
+                            <i class="fa fa-users"></i> Team</a>
+
+                        <a href="#blog" class="nav-item nav-link">
+                            <i class="fa fa-blog"></i> Blogs</a>
+
+                        <a href="#contact" class="nav-item nav-link">
+                            <i class="fa fa-envelope"></i> Contact</a>
+                   </div>
+                </div>
+            </div>
+        </div>
+        <!-- Nav Bar End -->
+        
+       <style>
+        :root {
+            --bsnl-blue: #0056b3;
+            --bsnl-orange: #ff6600;
+            --bsnl-green: #27ae60;
+            --dark-gray: #1a1a1a;
+            --light-bg: #f4f7f9;
+        }
+
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--bsnl-blue), #002244);
+            color: #fff;
+            padding: 2.5rem 1rem;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            color: #e0e0e0;
+        }
+
+        .badge-promo {
+            background-color: var(--bsnl-orange);
+            color: #fff;
+            display: inline-block;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1.5rem;
+        }
+
+        /* Activation Steps Section */
+        .steps-card {
+            background: #fff;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+            margin-bottom: 2rem;
+        }
+
+        .steps-card h2 {
+            color: var(--bsnl-blue);
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+            border-left: 4px solid var(--bsnl-orange);
+            padding-left: 10px;
+        }
+
+        .step-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.2rem;
+        }
+
+        .step-item {
+            background: #fdfdfd;
+            border: 1px solid #e5e5e5;
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .step-num {
+            background: var(--bsnl-blue);
+            color: #fff;
+            width: 32px;
+            height: 32px;
+            line-height: 32px;
+            border-radius: 50%;
+            display: inline-block;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        /* Search Section */
+        .search-panel {
+            background: #fff;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+            margin-bottom: 2rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .search-group {
+            flex: 1 1 300px;
+        }
+
+        .search-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 6px;
+            font-size: 0.9rem;
+        }
+
+        .search-group input, .search-group select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 1rem;
+            outline: none;
+        }
+
+        .search-group input:focus, .search-group select:focus {
+            border-color: var(--bsnl-blue);
+        }
+
+        /* VIP Numbers Grid */
+        .numbers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 1.2rem;
+        }
+
+        .num-card {
+            background: #fff;
+            border: 1px solid #e1e8ed;
+            padding: 1.2rem;
+            border-radius: 8px;
+            text-align: center;
+            transition: transform 0.2s, box-shadow 0.2s;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .num-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+        }
+
+        .num-category {
+            font-size: 0.75rem;
+            color: #777;
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+        }
+
+        .num-display {
+            font-size: 1.35rem;
+            font-weight: 800;
+            color: var(--bsnl-blue);
+            margin: 8px 0 4px 0;
+            letter-spacing: 1px;
+        }
+
+        .recharge-tag {
+            display: inline-block;
+            background: #e8f8f0;
+            color: var(--bsnl-green);
+            font-size: 0.8rem;
+            font-weight: bold;
+            padding: 2px 8px;
+            border-radius: 4px;
+            margin-bottom: 8px;
+            border: 1px dashed var(--bsnl-green);
+        }
+
+        .num-price {
+            font-size: 1.2rem;
+            color: #d35400;
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+
+        .btn-book {
+            background-color: var(--bsnl-orange);
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 0.95rem;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.2s;
+        }
+
+        .btn-book:hover {
+            background-color: #e65c00;
+        }
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.6);
+            align-items: center;
+            justify-content: center;
+            z-index: 10000;
+        }
+
+        .modal-content {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 480px;
+            max-height: 90vh;
+            overflow-y: auto;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            position: relative;
+        }
+
+        .modal-content h3 {
+            color: var(--bsnl-blue);
+            margin-bottom: 0.5rem;
+        }
+
+        .modal-content .close-btn {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 2rem;
+            cursor: pointer;
+            color: #000;
+        }
+
+        .form-field {
+            margin-bottom: 1rem;
+            text-align: left;
+        }
+
+        .form-field label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: bold;
+            margin-bottom: 4px;
+        }
+
+        .form-field input, .form-field textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 0.95rem;
+        }
+
+        .form-field textarea {
+            resize: vertical;
+            height: 70px;
+        }
+
+        .submit-status {
+            margin-top: 10px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background: var(--dark-gray);
+            color: #aaa;
+            margin-top: 3rem;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+         <img src="https://freepngimg.com/thumb/special_offer/10-2-special-offer-png-clipart.png" width="200px" height="auto" style="border-radius:10px">             
+        <p>BSNL Fancy Numbers + 1 Months Free Unlimited Calling & Data SIM Booking Portal</p>
+    </header>
+
+    <div class="container">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjXrIerxte1eyj8Vt-O1snUxx9SPLQxfAqfbWKlM3i0g&s=10" width="100%" height="auto" style="border-radius:10px">        
+        
+        <!-- Activation Guide -->
+     <section class="steps-card">
+    <h2>सिम एक्टिवेशन प्रक्रिया | SIM Activation Process.</h2>
+    <div class="step-grid">
+        <div class="step-item">
+            <span class="step-num">1</span>
+            <h4>अपना पसंदीदा नंबर चुनें</h4>
+            <p style="font-size: 0.85rem; color: #666; margin-top: 5px;">₹299 से ₹399 में से अपना पसंदीदा नंबर चुनें।</p>
+        </div>
+        <div class="step-item">
+            <span class="step-num">2</span>
+            <h4>टोकन प्राप्त करें</h4>
+            <p style="font-size: 0.85rem; color: #666; margin-top: 5px;">विवरण सबमिट करने पर रिज़र्वेशन कोड एसएमएस/ईमेल पर भेजा जाएगा।</p>
+        </div>
+        <div class="step-item">
+            <span class="step-num">3</span>
+            <h4>ई-केवाईसी के लिए अपने नज़दीकी BSNL रिटेलर या स्टोर पर जाएं</h4>
+            <p style="font-size: 0.85rem; color: #666; margin-top: 5px;">नज़दीकी BSNL स्टोर/रिटेलर के पास जाएं और बायोमेट्रिक सत्यापन करवाएं।</p>
+        </div>
+        <div class="step-item">
+            <span class="step-num">4</span>
+            <h4>मुफ़्त रिचार्ज एक्टिवेशन</h4>
+            <p style="font-size: 0.85rem; color: #666; margin-top: 5px;">सिम चालू होते ही 28 दिनों का मुफ़्त प्लान तुरंत सक्रिय (क्रेडिट) हो जाएगा।</p>
+        </div>
+    </div>
+</section>
+
+
+        <!-- Search Bar -->
+        <section class="search-panel">
+            <div class="search-group">
+                <label for="searchInput">Number Search (Eg: 5555):</label>
+                <input type="text" id="searchInput" placeholder="Digits search..." onkeyup="filterNumbers()">
+            </div>
+            <div class="search-group">
+                <label for="seriesFilter">Select Your Series:</label>
+                <select id="seriesFilter" onchange="filterNumbers()">
+                    <option value="">All Series</option>
+                    <option value="800">800 Series</option>
+                    <option value="9415">9415 Series</option>
+                    <option value="9450">9450 Series</option>
+                    <option value="9452">9452 Series</option>
+                    <option value="9455">9455 Series</option>
+                </select>
+            </div>
+            <div class="search-group">
+                <label for="categoryFilter">Pattern Type:</label>
+                <select id="categoryFilter" onchange="filterNumbers()">
+                    <option value="">All Categories</option>
+                    <option value="Tetra">Tetra (0000, 1111, etc.)</option>
+                    <option value="Mirror">Mirror / ABAB</option>
+                    <option value="Triplets">Triplets / Consecutive</option>
+                    <option value="Special">Special Numbers</option>
+                </select>
+            </div>
+        </section>
+
+        <!-- Dynamic Counter -->
+        <p style="margin-bottom: 1rem; font-weight: bold; color: #555;">
+            Available VIP Numbers: <span id="countDisplay" style="color: var(--bsnl-blue);">120</span>
+        </p>
+
+        <!-- Numbers List -->
+        <div class="numbers-grid" id="numbersContainer"></div>
+
+    </div>
+
+    <!-- Booking Modal with Web3Forms -->
+    <div class="modal" id="bookModal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h3>Book VIP Number</h3>
+            <p style="margin-bottom: 1rem; color: #555; font-size: 0.9rem;">
+                Selected Number: <b id="displaySelectedNum" style="color: var(--bsnl-blue); font-size: 1.1rem;"></b>
+            </p>
+            
+            <form id="bookingForm" action="https://api.web3forms.com/submit" method="POST" onsubmit="submitToWeb3Forms(event)">
+                
+                <!-- Apna Web3Forms Access Token Yahan Replace Karein -->
+                <input type="hidden" name="access_key" value="fdff9149-19fc-4bf3-8a40-f83b405de0d0">
+                <input type="hidden" name="subject" value="New BSNL VIP Number Booking Request.">
+                
+                <input type="hidden" id="formSelectedNumber" name="Selected_VIP_Number">
+                <input type="hidden" id="formSelectedPrice" name="Number_Price">
+
+                <div class="form-field">
+                    <label>Full Name:</label>
+                    <input type="text" name="Customer_Name" required>
+                </div>
+              
+              <div class="form-field">
+                    <label>Email:</label>
+                    <input type="email" name="Contact_Email" required>
+                </div>
+              
+                <div class="form-field">
+                    <label>Phone Number:</label>
+                    <input type="tel" name="Contact_Phone" pattern="[0-9]{10}" maxlength="10" required>
+                </div>
+
+                <div class="form-field">
+                    <label>Aadhaar Number:</label>
+                    <input type="tel" name="Aadhaar_Number" pattern="[0-9]{12}" maxlength="12" required>
+                </div>
+
+                <div class="form-field">
+                    <label>Full Address & Pincode:</label>
+                    <textarea name="Customer_Address" required></textarea>
+                </div>
+
+                <button type="submit" id="submitBtn" class="btn-book" style="padding: 12px;">Confirm & Book</button>
+                <div id="statusMessage" class="submit-status"></div>
+            </form>
+        </div>
+    </div>
+
+                    <!-- Footer Start -->
+        <div class="footer wow fadeIn" data-wow-delay="0.3s">
+            <div class="container-fluid">
+                <div class="container">
+                    <div class="footer-info">
+                        <img src="img/adtech.png" height="auto" width="55%">
+                        <br><br>
+                        <h2>ADTech Software Solutions</h2>
+                        <h3>(Location: Barabanki District Uttar Pradesh India 225001)</h3>
+                        <div class="footer-menu">
+                            <p>+91 8005389500</p>
+                            <p>contact@adtech2021.in</p>
+                        </div>
+
+ <div class="footer-social">
+    <a href="mailto:help.adtech@protonmail.com" target="_blank">
+        <i class="fab fa-google"></i>
+    </a>
+
+    <a href="https://facebook.com/adtech2021.in" target="_blank">
+        <i class="fab fa-facebook"></i>
+    </a>
+
+    <a href="https://instagram.com/adtech2021.in" target="_blank">
+        <i class="fab fa-instagram"></i>
+    </a>
+
+    <a href="https://twitter.com/adtech2021_in" target="_blank">
+        <!-- Using Twitter/X icon -->
+        <i class="fab fa-twitter"></i>
+    </a>
+
+    <a href="https://linkedin.com/in/adtech2021-in" target="_blank">
+        <i class="fab fa-linkedin"></i>
+    </a>
+
+    <a href="https://github.com/adtech2021-in" target="_blank">
+        <i class="fab fa-github"></i>
+    </a>
+
+    <a href="https://youtube.com/@adtech2021_in" target="_blank">
+        <i class="fab fa-youtube"></i>
+    </a>
+</div>
+                    </div>
+                </div>
+                <div class="container copyright">
+                    <p>&copy; 2026 - All Rights Reserved | Designed & Developed with <a href="#">ADTech India</a></p>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+        
+        
+        <!-- Back to top button -->
+        <a href="#" class="btn back-to-top"><i class="fa fa-chevron-up"></i></a>
+        
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/wow/wow.min.js"></script>
+        <script src="lib/waypoints/waypoints.min.js"></script>
+        <script src="lib/typed/typed.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="lib/isotope/isotope.pkgd.min.js"></script>
+        <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+        <!-- Template Javascript -->
+        <script src="main.js"></script>
+
+
+    <script>
+        const regularPrefixes = ['9415', '9450', '9452', '9455'];
+        const budgetPrices = ['₹299', '₹329', '₹349', '₹379', '₹399'];
+
+        const rawPatterns = [
+            { suffix: '00001', cat: 'Special' }, { suffix: '11112', cat: 'Tetra' }, { suffix: '22223', cat: 'Tetra' },
+            { suffix: '33334', cat: 'Tetra' }, { suffix: '44445', cat: 'Tetra' }, { suffix: '55556', cat: 'Tetra' },
+            { suffix: '66667', cat: 'Tetra' }, { suffix: '77778', cat: 'Tetra' }, { suffix: '88889', cat: 'Tetra' },
+            { suffix: '99990', cat: 'Tetra' }, { suffix: '00000', cat: 'Tetra' }, { suffix: '11111', cat: 'Tetra' },
+            { suffix: '22222', cat: 'Tetra' }, { suffix: '33333', cat: 'Tetra' }, { suffix: '44444', cat: 'Tetra' },
+            { suffix: '55555', cat: 'Tetra' }, { suffix: '66666', cat: 'Tetra' }, { suffix: '77777', cat: 'Tetra' },
+            { suffix: '88888', cat: 'Tetra' }, { suffix: '99999', cat: 'Tetra' },
+            { suffix: '12121', cat: 'Mirror' }, { suffix: '23232', cat: 'Mirror' }, { suffix: '34343', cat: 'Mirror' },
+            { suffix: '45454', cat: 'Mirror' }, { suffix: '56565', cat: 'Mirror' }, { suffix: '67676', cat: 'Mirror' },
+            { suffix: '78787', cat: 'Mirror' }, { suffix: '89898', cat: 'Mirror' }, { suffix: '90909', cat: 'Mirror' },
+            { suffix: '10101', cat: 'Mirror' }, { suffix: '20202', cat: 'Mirror' }, { suffix: '30303', cat: 'Mirror' },
+            { suffix: '40404', cat: 'Mirror' }, { suffix: '50505', cat: 'Mirror' }, { suffix: '60606', cat: 'Mirror' },
+            { suffix: '00786', cat: 'Special' }, { suffix: '78600', cat: 'Special' }, { suffix: '78686', cat: 'Special' },
+            { suffix: '78699', cat: 'Special' }, { suffix: '78678', cat: 'Special' }, { suffix: '07860', cat: 'Special' },
+            { suffix: '12345', cat: 'Triplets' }, { suffix: '23456', cat: 'Triplets' }, { suffix: '34567', cat: 'Triplets' },
+            { suffix: '45678', cat: 'Triplets' }, { suffix: '56789', cat: 'Triplets' }, { suffix: '98765', cat: 'Triplets' },
+            { suffix: '87654', cat: 'Triplets' }, { suffix: '76543', cat: 'Triplets' }, { suffix: '65432', cat: 'Triplets' }
+        ];
+
+// 20 Dedicated 800 Mobile Series VIP Numbers (10 Digits)
+const series800List = [
+    { num: "8000 00 7700", cat: "Tetra", price: "₹399" },
+    { num: "8000 11 1511", cat: "Tetra", price: "₹399" },
+    { num: "8000 22 5222", cat: "Tetra", price: "₹349" },
+    { num: "8000 33 3933", cat: "Tetra", price: "₹349" },
+    { num: "8000 44 4444", cat: "Tetra", price: "₹349" },
+    { num: "8000 55 5855", cat: "Tetra", price: "₹399" },
+    { num: "8000 77 7797", cat: "Tetra", price: "₹399" },
+    { num: "8000 88 8088", cat: "Tetra", price: "₹399" },
+    { num: "8000 99 9899", cat: "Tetra", price: "₹399" },
+    { num: "8000 00 0786", cat: "Special", price: "₹399" },
+    { num: "8001 78 6786", cat: "Special", price: "₹399" },
+    { num: "8009 00 0001", cat: "Special", price: "₹299" },
+    { num: "8001 12 1212", cat: "Mirror", price: "₹329" },
+    { num: "8001 23 2323", cat: "Mirror", price: "₹329" },
+    { num: "8001 50 5050", cat: "Mirror", price: "₹349" },
+    { num: "8001 70 7070", cat: "Mirror", price: "₹349" },
+    { num: "8001 90 9090", cat: "Mirror", price: "₹379" },
+    { num: "8009 12 3456", cat: "Triplets", price: "₹349" },
+    { num: "8009 56 7890", cat: "Triplets", price: "₹349" },
+    { num: "8009 65 4321", cat: "Triplets", price: "₹329" }
+];
+
+        const vipNumbers = [];
+        let idCounter = 1;
+
+        // 1. Add 20 numbers from 800 Series
+        series800List.forEach(item => {
+            vipNumbers.push({
+                id: idCounter++,
+                number: item.num,
+                series: '800',
+                category: item.cat,
+                price: item.price
+            });
+        });
+
+        // 2. Add 100 regular series numbers
+        for (let i = 0; i < 100; i++) {
+            const prefix = regularPrefixes[i % regularPrefixes.length];
+            const pattern = rawPatterns[i % rawPatterns.length];
+            const price = budgetPrices[i % budgetPrices.length];
+            const rawNum = prefix + pattern.suffix;
+            const formattedNum = rawNum.slice(0, 5) + " " + rawNum.slice(5);
+
+            vipNumbers.push({
+                id: idCounter++,
+                number: formattedNum,
+                series: prefix,
+                category: pattern.cat,
+                price: price
+            });
+        }
+
+        function renderCards(data) {
+            const container = document.getElementById('numbersContainer');
+            const countDisplay = document.getElementById('countDisplay');
+            container.innerHTML = '';
+            countDisplay.innerText = data.length;
+
+            if (data.length === 0) {
+                container.innerHTML = '<p style="grid-column: 1/-1; text-align: center; color: #888;">Koi number uplabdh nahi mila.</p>';
+                return;
+            }
+
+            data.forEach(item => {
+                const card = document.createElement('div');
+                card.className = 'num-card';
+                card.innerHTML = `
+                    <div>
+                        <div class="num-category">${item.category} • ${item.series} Series</div>
+                        <div class="num-display">${item.number}</div>
+                        <div class="recharge-tag">🎁 Get 1 Months Free Recharges</div>
+                    </div>
+                    <div>
+                        <div class="num-price">${item.price}</div>
+                        <button class="btn-book" onclick="openModal('${item.number}', '${item.price}')">Book Now</button>
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        function filterNumbers() {
+            const query = document.getElementById('searchInput').value.trim().replace(/\s+/g, '').toLowerCase();
+            const seriesVal = document.getElementById('seriesFilter').value;
+            const categoryVal = document.getElementById('categoryFilter').value;
+
+            const filtered = vipNumbers.filter(item => {
+                const cleanNumber = item.number.replace(/\s+/g, '').toLowerCase();
+                const matchesQuery = cleanNumber.includes(query);
+                const matchesSeries = seriesVal === "" || item.series === seriesVal;
+                const matchesCategory = categoryVal === "" || item.category === categoryVal;
+                return matchesQuery && matchesSeries && matchesCategory;
+            });
+
+            renderCards(filtered);
+        }
+
+        function openModal(number, price) {
+            document.getElementById('displaySelectedNum').innerText = `${number} (${price})`;
+            document.getElementById('formSelectedNumber').value = number;
+            document.getElementById('formSelectedPrice').value = price;
+            document.getElementById('statusMessage').innerText = '';
+            document.getElementById('bookModal').style.display = 'flex';
+        }
+
+        function closeModal() {
+            document.getElementById('bookModal').style.display = 'none';
+        }
+
+        function submitToWeb3Forms(e) {
+            e.preventDefault();
+            const form = document.getElementById('bookingForm');
+            const status = document.getElementById('statusMessage');
+            const btn = document.getElementById('submitBtn');
+
+            btn.disabled = true;
+            status.style.color = "#0056b3";
+            status.innerText = "Request Submitting...";
+
+            const formData = new FormData(form);
+
+            fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                body: formData
+            })
+            .then(async (response) => {
+                let res = await response.json();
+                if (response.status === 200) {
+                    status.style.color = "#27ae60";
+                    status.innerText = "Congratulations! Your Request has Sucessfully Submitted.";
+                    setTimeout(() => {
+                        form.reset();
+                        closeModal();
+                        btn.disabled = false;
+                        status.innerText = "";
+                    }, 2500);
+                } else {
+                    status.style.color = "#e74c3c";
+                    status.innerText = res.message || "503 Something went wrong, Retry!";
+                    btn.disabled = false;
+                }
+            })
+            .catch(error => {
+                status.style.color = "#e74c3c";
+                status.innerText = "404 Network Error!";
+                btn.disabled = false;
+            });
+        }
+
+        window.onclick = function(event) {
+            const modal = document.getElementById('bookModal');
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+
+        // Initialize with total 120 numbers
+        renderCards(vipNumbers);
+    </script>
+</body>
+</html>
